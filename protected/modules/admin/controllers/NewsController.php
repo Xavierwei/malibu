@@ -32,14 +32,44 @@ class NewsController extends Controller
 
 	public function actionList()
 	{
-		$criteria = new CDbCriteria();
-		$criteria->with = 'menu';
-        $count = News::model()->count($criteria);
-        $pager = new CPagination($count);
-        $pager->pageSize = 20;      
-        $pager->applyLimit($criteria);
-        $data = News::model()->findAll($criteria);
-        $this->render('list',array('data'=>$data,'page'=>$pager,'model'=>News::model()));
+        $model=new News();
+        if($_GET['News']["menu_id"] || $_GET['News']["title"])
+        {
+            $model->menu_id=$_GET['News']["menu_id"];
+            $model->title=$_GET['News']["title"];
+
+            $criteria = new CDbCriteria();
+            $criteria->with = 'menu';
+
+            if($model->title)
+            {
+                $criteria->addCondition("t.title LIKE :title");
+                $criteria->params[':title']= '%'.$model->title.'%';
+            }
+
+            if($model->menu_id)
+            {
+                $criteria->addCondition('menu_id = :menu_id');
+                $criteria->params[':menu_id']=$model->menu_id;
+            }
+
+            $count = News::model()->count($criteria);
+            $pager = new CPagination($count);
+            $pager->pageSize = 15;
+            $pager->applyLimit($criteria);
+            $data = News::model()->findAll($criteria);
+        }
+        else
+        {
+            $criteria = new CDbCriteria();
+            $criteria->with = 'menu';
+            $count = News::model()->count($criteria);
+            $pager = new CPagination($count);
+            $pager->pageSize = 15;
+            $pager->applyLimit($criteria);
+            $data = News::model()->findAll($criteria);
+        }
+        $this->render('list',array('data'=>$data,'page'=>$pager,'model'=>$model));
 	}
 
 	public function actionCreat()
@@ -191,6 +221,7 @@ class NewsController extends Controller
 			}
 		}
 	}
+
 
 	public function loadModel()
 	{

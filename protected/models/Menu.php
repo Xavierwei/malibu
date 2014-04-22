@@ -63,6 +63,7 @@ class Menu extends CActiveRecord
 					$item->space.='┃ ';
 				}
 			}
+            $list[0]='选择全部';
 			$list[$item->id] = $item->space.$item['name'];
 		}
 		return $list;

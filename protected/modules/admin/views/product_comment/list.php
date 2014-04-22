@@ -31,7 +31,6 @@
 				<td><?php echo isset($item->product->title)?$item->product->title:'';?></td>
 				<td><?php echo isset($item->member->name)?$item->member->name:'';?></td>
 				<td><?php echo CHtml::link($item->content,array('/admin/product_comment/edit/','id'=>$item->id)); ?></td>
-				<td><?php echo $item->star;?></td>
 				<td><?php echo date("Y-m-d",$item->create_time);?></td>
 				<?php $hot = $item->hot==1?'<img src="'.yii::app()->baseUrl.'/style/admin/images/audit.gif">':'<img src="'.yii::app()->baseUrl.'/style/admin/images/unaudit.gif">';?>
 				<td><?php echo CHtml::link($hot,array('/admin/product_comment/hot/','id'=>$item->id)); ?></td>

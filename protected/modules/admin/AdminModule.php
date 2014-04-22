@@ -45,14 +45,14 @@ class AdminModule extends CWebModule
 						//array('name'=>'单页管理','com'=>'leaf','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
 						//array('name'=>'单页文章','com'=>'article','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1)
 					),
-//					array(
-//						array('name'=>'内容管理','com'=>'product','root'=>1,'list'=>0,'creat'=>0,'edit'=>0,'audit'=>1,'visible'=>1),
-//						array('name'=>'产品分类','com'=>'category','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
-//						array('name'=>'产品管理','com'=>'product','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
-//						//array('name'=>'产品评论','com'=>'product_comment','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
+					array(
+						array('name'=>'新闻管理','com'=>'product','root'=>1,'list'=>0,'creat'=>0,'edit'=>0,'audit'=>1,'visible'=>1),
+						array('name'=>'新闻分类','com'=>'category','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
+						array('name'=>'新闻管理','com'=>'product','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
+						array('name'=>'新闻评论','com'=>'product_comment','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
 //						array('name'=>'图片分类','com'=>'type','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
 //						array('name'=>'图片管理','com'=>'picture','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1)
-//					),
+					),
 //					array(
 //						array('name'=>'其他管理','com'=>'friend_link','root'=>1,'list'=>0,'creat'=>0,'edit'=>0,'audit'=>1,'visible'=>1),
 //						array('name'=>'友情链接','com'=>'friend_link','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),

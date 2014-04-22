@@ -34,6 +34,13 @@
 				<?php echo $form->error($model,'component'); ?>
 			</td>
 		</tr>
+        <tr>
+            <td class="leftTd" width="100"><?php echo $form->labelEx($model,'title'); ?></td>
+            <td>
+                <?php echo $form->textField($model,'title',array('value'=>$model->title,'class'=>'longText'));?>
+                <?php echo $form->error($model,'title'); ?>
+            </td>
+        </tr>
 		<tr>
 			<td class="leftTd"><?php echo $form->labelEx($model,'parent'); ?></td>
 			<td>
@@ -51,10 +58,10 @@
                 <?php
                 $this->widget('ext.kindeditor.KindUploadWidget',array(
                     'id'=>'uploadButton1',
-                    'dir'=>'image/news',
+                    'dir'=>'image/menu',
                     'preview'=>'photoPreview1',
                     'delete'=>'photoDelete1',
-                    'callback_url'=>Yii::app()->createUrl('/admin/news/photoSave'),
+                    'callback_url'=>Yii::app()->createUrl('/admin/menu/photoSave'),
 
                     'parameters'=>array(
                         'id'=>$model->id,
@@ -70,7 +77,7 @@
                 <?php echo CHtml::image($model->photo1!=''?$model->photo1:yii::app()->baseUrl.'/style/admin/images/noPhoto.png',$model->title,array('id'=>'photoPreview1','class'=>'photoPreview','height'=>'50px'));?>
                 <?php echo CHtml::ajaxLink(
                     '删除',
-                    array('/admin/news/photoDelete'),
+                    array('/admin/menu/photoDelete'),
                     array(
                         'data'=>array('id'=>$model->id,'name'=>'photo1','photo_url'=>'js:$("#photo1").val()','YII_CSRF_TOKEN'=>Yii::app()->request->csrfToken),
                         'type'=>"post",
@@ -108,13 +115,6 @@
 			<td>
 				<?php echo $form->radioButtonList($model,'audit',array(0=>'未审核',1=>'已审核'),array('separator'=>'&nbsp;&nbsp;'));?>
 				<?php echo $form->error($model,'audit'); ?>
-			</td>
-		</tr>
-		<tr>
-			<td class="leftTd" width="100"><?php echo $form->labelEx($model,'title'); ?></td>
-			<td>
-				<?php echo $form->textField($model,'title',array('value'=>$model->title,'class'=>'longText'));?>
-				<?php echo $form->error($model,'title'); ?>
 			</td>
 		</tr>
 		<tr>

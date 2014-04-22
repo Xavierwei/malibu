@@ -20,7 +20,7 @@ return array(
 	// 'onBeginRequest' => 'function',
   
 	// 预载入的应用组件
-	//'preload'=>array('log'),
+	'preload'=>array('log'),
 
 	// autoloading model and component classes
 	//模块
@@ -71,6 +71,10 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=yii',
 			'emulatePrepare' => true,
+            'schemaCachingDuration'=>3600,  // 开启表结构缓存（schema caching）提高性能
+            'schemaCacheID'=>'MemCache',    //设置缓存名称
+            'enableProfiling' => true,                  //这个是用来记录日志的，会记录每一条语句执行的时间
+            'enableParamLogging' => true,       //true表示包括sql语句的参数在内的信息都会记录到日志里，非常详细
 			'username' => 'root',
 			'password' => 'root',
 			'charset' => 'utf8',
@@ -84,6 +88,15 @@ return array(
             	array('host' => '10.96.190.80', 'port' => 11211),
 			),
 			*/
+        ),
+
+        //缓存
+        "MemCache" => array(
+            'class'=>'system.caching.CMemCache',
+            'useMemcached'=>false, //使用memcache，不使用memcached
+            "servers" => array(
+                array("host" => "127.0.0.1","port" => "11211","weight" => 1),
+            ),
         ),
 
 		'session' => array(
@@ -117,17 +130,22 @@ return array(
          		'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		'log'=>array(
-			'class'=>'CLogRouter',
+        'log'=>array(
+            'class'=>'CLogRouter',
 			'routes'=>array(
+                array(  //开启debug扩展
+                    'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+                    // Access is restricted by default to the localhost
+                    'ipFilters'=>array('172.16.111.87', '88.23.23.0/24'),
+                ),
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-				// uncomment the following to show log messages on web pages
-				array(
-					'class'=>'CWebLogRoute',
-				),
+//            array( //开发过程中所有日志直接页面打印，这样不需要登录服务器看日志了
+//                'class' => 'CWebLogRoute',
+//                'levels' => 'trace,info,profile,warning,error',
+//            ),
 			),
 		),
 	),

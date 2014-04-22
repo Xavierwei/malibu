@@ -5,7 +5,7 @@
 ));?>
 <table class="contentTab" width="100%">
     <tr>
-        <td class="titleTd" colspan="2">导航文章</td>
+        <td class="titleTd" colspan="2">栏目文章</td>
     </tr>
     <tr>
         <td class="leftTd" width="100">&nbsp;</td>
@@ -79,49 +79,6 @@
         </td>
     </tr>
     <tr>
-        <td class="leftTd"><?php echo $form->labelEx($model,'photo2'); ?></td>
-        <td>
-            <?php echo CHtml::Button('上传图片',array('id'=>'uploadButton2','class'=>'uploadButton'));?>
-            <?php echo CHtml::activeHiddenField($model,'photo2',array('value'=>$model->photo2,'id'=>'photo2'));?>
-            <?php echo $form->error($model,'photo2'); ?>
-
-            <?php
-            $this->widget('ext.kindeditor.KindUploadWidget',array(
-                'id'=>'uploadButton2',
-                'dir'=>'image/news',
-                'preview'=>'photoPreview2',
-                'delete'=>'photoDelete2',
-                'callback_url'=>Yii::app()->createUrl('/admin/news/photoSave'),
-
-                'parameters'=>array(
-                    'id'=>$model->id,
-                    'name'=>'photo2',
-                )
-            ));
-            ?>
-        </td>
-    </tr>
-    <tr>
-        <td class="leftTd">预览2</td>
-        <td>
-            <?php echo CHtml::image($model->photo2!=''?yii::app()->baseUrl.$model->photo2:yii::app()->baseUrl.'/style/admin/images/noPhoto.png',$model->title,array('id'=>'photoPreview2','class'=>'photoPreview','height'=>'50px'));?>
-            <?php echo CHtml::ajaxLink(
-                '删除',
-                array('/admin/news/photoDelete'),
-                array(
-                    'data'=>array('id'=>$model->id,'name'=>'photo2','photo_url'=>'js:$("#photo2").val()','YII_CSRF_TOKEN'=>Yii::app()->request->csrfToken),
-                    'type'=>"post",
-                    'success' => 'js:function(data){
-			                $("#photoDelete2").hide();
-			                $("#photoPreview2").attr("src","'.yii::app()->baseUrl.'/style/admin/images/noPhoto.png");
-			                $("#photo2").val("");
-			            }'
-                ),
-                array('id'=>'photoDelete2','class'=>'photoDelete','style'=>$model->photo2!=''?'':'display:none')
-            );?>
-        </td>
-    </tr>
-    <tr>
         <td class="leftTd" width="100"><?php echo $form->labelEx($model,'content'); ?></td>
         <td>
             <?php echo CHtml::activeTextArea($model,'content',array('value'=>$model->content));?>
@@ -154,23 +111,9 @@
         </td>
     </tr>
     <tr>
-        <td class="leftTd" width="100"><?php echo $form->labelEx($model,'hot'); ?></td>
-        <td>
-            <?php echo $form->radioButtonList($model,'hot',array(0=>'未置热',1=>'已置热'),array('separator'=>'&nbsp;&nbsp;'));?>
-            <?php echo $form->error($model,'hot'); ?>
-        </td>
-    </tr>
-    <tr>
-        <td class="leftTd" width="100"><?php echo $form->labelEx($model,'recommend'); ?></td>
-        <td>
-            <?php echo $form->radioButtonList($model,'recommend',array(0=>'未推荐',1=>'已推荐'),array('separator'=>'&nbsp;&nbsp;'));?>
-            <?php echo $form->error($model,'recommend'); ?>
-        </td>
-    </tr>
-    <tr>
         <td class="leftTd" width="100"><?php echo $form->labelEx($model,'audit'); ?></td>
         <td>
-            <?php echo $form->radioButtonList($model,'audit',array(0=>'未审核',1=>'已审核'),array('separator'=>'&nbsp;&nbsp;'));?>
+            <?php echo $form->radioButtonList($model,'audit',array(1=>'已审核',0=>'未审核'),array('separator'=>'&nbsp;&nbsp;'));?>
             <?php echo $form->error($model,'audit'); ?>
         </td>
     </tr>

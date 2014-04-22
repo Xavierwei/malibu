@@ -40,13 +40,6 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="leftTd"><?php echo $form->labelEx($model,'star'); ?></td>
-			<td>
-				<?php echo $form->textField($model,'star',array('value'=>$model->star,'class'=>'commonText'));?>
-				<?php echo $form->error($model,'star'); ?>
-			</td>
-		</tr>
-		<tr>
 			<td class="leftTd" width="100"><?php echo $form->labelEx($model,'hot'); ?></td>
 			<td>
 				<?php echo $form->radioButtonList($model,'hot',array(0=>'未置热',1=>'已置热'),array('separator'=>'&nbsp;&nbsp;'));?>

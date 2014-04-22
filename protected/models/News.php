@@ -30,7 +30,7 @@ class News extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => '标题',
-			'menu_id' => '所属导航',
+			'menu_id' => '所属栏目',
 			'content' => '文章内容',
 			'audit' => '审核',
 			'hot'=> '置热',
@@ -40,7 +40,7 @@ class News extends CActiveRecord
 			'hit' => '点击量',
 			'comment_number' => '评论数量',
 			'source'=> '来源',
-			'source_url'=> '来源链接',
+			'source_url'=> '视频链接',
 			'description'=> '描述',
 			'keyword'=> '关键字',
 			'create_time' => '创建时间',

@@ -62,7 +62,7 @@
 		<tr>
 			<td class="leftTd" width="100"><?php echo $form->labelEx($model,'audit'); ?></td>
 			<td>
-				<?php echo $form->radioButtonList($model,'audit',array(0=>'未审核',1=>'已审核'),array('separator'=>'&nbsp;&nbsp;'));?>
+				<?php echo $form->radioButtonList($model,'audit',array(1=>'已审核',0=>'未审核'),array('separator'=>'&nbsp;&nbsp;'));?>
 				<?php echo $form->error($model,'audit'); ?>
 			</td>
 		</tr>
