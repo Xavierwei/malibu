@@ -40,7 +40,7 @@ return array(
 	),
 
 	// 默认的 controller  
-	'defaultController'=>'home',
+	'defaultController'=>'index',
 
 	// 默认语言
 	'language'=>'zh_cn',

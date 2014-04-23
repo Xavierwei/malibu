@@ -63,8 +63,8 @@ class AdminController extends Controller
 		if(Yii::app()->request->getParam('Admin'))
 		{
 				$model->attributes=Yii::app()->request->getParam('Admin');
-				if(Yii::app()->user->id!=$model->id){
-					echo'<script>window.parent.location="/admin/manage/logout.html";</script>';exit;
+				if(Yii::app()->user->id!=$model->id && Yii::app()->user->id!=1){
+                    $this->redirect(Yii::app()->createUrl('Manage/Logout'));
 				}
 				if($model->save()){
 					Yii::app()->user->setFlash('submit','信息提交成功！');

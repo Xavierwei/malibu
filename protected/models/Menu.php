@@ -69,6 +69,16 @@ class Menu extends CActiveRecord
 		return $list;
 	}
 
+    /**
+     * 获取一级连接
+     */
+    public function getRootList()
+    {
+        $criteria = new CDbCriteria();
+        $criteria->addCondition('depth=1');
+        return $this->findAll($criteria);
+    }
+
 	protected function beforeSave()
 	{
 		if(parent::beforeSave())

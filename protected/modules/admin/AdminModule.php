@@ -10,6 +10,9 @@ class AdminModule extends CWebModule
 			)
 		);
 
+        //设置默认控制器
+        $this->defaultController="Home";
+
 		Yii::app()->setComponents(
 			array(
 		 		'user'=>array(

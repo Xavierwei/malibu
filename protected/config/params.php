@@ -2,7 +2,7 @@
 
 // this contains the application parameters that can be maintained via GUI
 return array(
-	'perPage'=>2,
+    'videoWidth'=>520,      //视频宽度
 	// this is displayed in the header section
 	//'title'=>'My Yii Blog',
 	// this is used in error pages

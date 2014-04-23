@@ -21,7 +21,7 @@ class News extends CActiveRecord
 			array('title,menu_id','required','on'=>'insert,update'),
 			array('menu_id','numerical','integerOnly'=>true,'min'=>1,'on'=>'insert,update'),
 			array('hit','numerical','integerOnly'=>true,'min'=>0,'on'=>'insert,update'),
-			array('source_url', 'url','on'=>'insert,update'),
+//			array('source_url', 'url','on'=>'insert,update'),
 		);
 	}
 

@@ -3,86 +3,142 @@
 class ProductController extends Controller
 {
 	public $layout='main';
-	private $_model;
+	public $_model;
 
-	//产品列表
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+		);
+	}
+
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
+	{
+		return array(
+			array('allow', // allow authenticated users to access all actions
+				'users'=>array('*'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
+
 	public function actionIndex()
 	{
-		
-	    $criteria=new CDbCriteria(array(
-			'order'=>'update_time DESC',
-		));
-	    $dataProvider=new CActiveDataProvider('Product', array(
-			'pagination'=>array(
-				'pageSize'=>Yii::app()->params['perPage'],
-			),
-			'criteria'=>$criteria,
-		));
-		$this->render('index', array('dataProvider'=>$dataProvider));
+        // product 为马利宝产品
+        $model=Menu::model()->find(
+            array(
+                'condition'=>'component = :component',
+                'params'=>array(':component'=>'product'),
+            )
+        );
+        if($model)
+        {
+            $modelArray=Menu::model()->findAll(
+                array(
+                    'condition'=>'parent = :parent',
+                    'params'=>array(':parent'=>$model->id),
+                )
+            );
+        }
+        $this->render('index',array('model'=>$modelArray));
 	}
 
-	//产品详细
-	public function actionView()
-	{
-		$product=$this->loadModel();
-		$this->render('view', array('model'=>$product));
-	}
+    public function actionRtd()
+    {
+        // rtd 为椰子味朗姆预调酒
+        $model=Menu::model()->find(
+            array(
+                'condition'=>'component = :component',
+                'params'=>array(':component'=>'rtd'),
+            )
+        );
 
-	//添加产品
-	public function actionCreate()
-	{
-		$model = new Product;
-		if(isset($_POST['Product'])){
-			$model->attributes=$_POST['Product'];
-			if($model->save()){
-				$this->redirect(array('view','id'=>$model->id));
-			}
+        $this->render('rtd',array('model'=>$model));
+    }
 
-		}
-		$this->render('creat', array('model'=>$model));
-	}
+    public function actionOriginal()
+    {
+        // original 为椰子味朗姆预调酒
+        $model=Menu::model()->find(
+            array(
+                'condition'=>'component = :component',
+                'params'=>array(':component'=>'original'),
+            )
+        );
 
-	//修改产品
-	public function actionUpdate()
-	{
-		$model=$this->loadModel();
-		if(isset($_POST['Product']))
-		{
-			$model->attributes=$_POST['Product'];
-			if($model->save()){
-				$this->redirect(array('view','id'=>$model->id));
-			}
-		}
+        $children=News::model()->findAll(
+            array(
+                'condition'=>'menu_id = :menu_id AND audit = 1',        //audit 1表示已经审核
+                'params'=>array(':menu_id'=>$model->id),
+            )
+        );
+        $this->render('original',array('model'=>$model,'children'=>$children));
+    }
 
-		$this->render('update',array('model'=>$model));
-	}
+    public function actionDrink($id)
+    {
+        if($_GET['prev']=='prev')
+        {
+            $model=News::model()->find(
+                array(
+                    'condition'=>'id < :id AND audit = 1',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id)),
+                )
+            );
+        }
+        elseif($_GET['next']=='next')
+        {
+            $model=News::model()->find(
+                array(
+                    'condition'=>'id > :id AND audit = 1',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id)),
+                )
+            );
+        }
+        else
+        {
+            $model=News::model()->find(
+                array(
+                    'condition'=>'id = :id AND audit = 1',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id)),
+                )
+            );
+        }
 
-	//删除产品
-	public function actionDelete()
-	{	
-		if(Yii::app()->request->isPostRequest)
-		{
-			// we only allow deletion via POST request
-			$this->loadModel()->delete();
-			$this->redirect(array('index'));
-		}else{
-			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
-		}
-	}
+        if($model)
+        {
+            $this->render('drink',array('model'=>$model));
+        }
+        else
+        {
+            $model=News::model()->find(
+                array(
+                    'condition'=>'id = :id AND audit = 1',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id)),
+                )
+            );
 
-	//
+            $this->render('drink',array('model'=>$model));
+        }
+
+    }
+
+
 	public function loadModel()
 	{
 		if($this->_model===null)
 		{
-			if(isset($_GET['id']))
-			{
-				$this->_model=Product::model()->findByPk($_GET['id']);
-			}
-			if($this->_model===null)
-			{
-				throw new CHttpException(404,'The requested page does not exist.');
-			}
+			$this->_model=Site::model()->findByPk(1);
+		}
+		if($this->_model===null){
+			throw new CHttpException(404,'LoadModel无法加载模型');
 		}
 		return $this->_model;
 	}
