@@ -92,7 +92,9 @@ a:hover{color:#018b85}
 	.scrollbtn{width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
 	.prev{background: url('../img/prev.png') no-repeat;left:-30px}
 	.next{background: url('../img/next.png') no-repeat;right:-30px}
-
+.jcarousel-clip{width: 330px;height: 160px;overflow: hidden}
+.jcarousel-prev{background: url('../img/prev.png') no-repeat;left:-30px;width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
+.jcarousel-next{background: url('../img/next.png') no-repeat;right:-30px;width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
 
 
 /* sec_home Used
