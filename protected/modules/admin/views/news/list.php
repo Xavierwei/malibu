@@ -14,11 +14,6 @@
                     <?php echo $form->labelEx($model,'title'); ?>
                     <?php echo $form->textField($model,'title',array('value'=>$model->title,'class'=>'commonText'));?>
                     <?php echo CHtml::Button('查询',array('class'=>'button','onclick'=>'formSubmit("'.$this->createUrl('/admin/news/List/').'","")'));?>
-                    <script type="application/javascript">
-    //                    $(function(){
-    //                        $("#xform").validationEngine();
-    //                    });
-                    </script>
             </td>
         </tr>
 
@@ -49,7 +44,7 @@
 <!--				<td width="100">--><?php //echo $item->photo2!=''?CHtml::image(Yii::app()->baseUrl.$item->photo2,$item->title,array('height'=>'40px')):'';?><!--</td>-->
 				<td><?php echo CHtml::link($item->title,array('/admin/news/edit/','id'=>$item->id)); ?></td>
 				<td><?php echo isset($item->menu->name)?$item->menu->name:'';?></td>
-				<td><?php echo $item->source_url!=''?CHtml::link($item->source_url,$item->source_url,array('target'=>'_blank')):$item->source_url;?></td>
+				<td class="embed-set"><?=$item->source_url;?></td>
 <!--				<td>--><?php //echo $item->hit;?><!--</td>-->
 <!--				<td>--><?php //echo $item->comment_number;?><!--</td>-->
 				<td><?php echo date("Y-m-d",$item->update_time);?></td>
@@ -85,3 +80,7 @@
 	</table>
 	<?php $this->endWidget(); ?>
 </div>
+<script>
+    $('td.embed-set embed').css('width','300px');
+    $('td.embed-set embed').css('height','150px');
+</script>

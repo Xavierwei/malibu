@@ -84,12 +84,20 @@ class ProductController extends Controller
 
     public function actionDrink($id)
     {
+        // original 为椰子味朗姆预调酒
+        $modelMenu=Menu::model()->find(
+            array(
+                'condition'=>'component = :component',
+                'params'=>array(':component'=>'original'),
+            )
+        );
+
         if($_GET['prev']=='prev')
         {
             $model=News::model()->find(
                 array(
-                    'condition'=>'id < :id AND audit = 1',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id)),
+                    'condition'=>'id < :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
                 )
             );
         }
@@ -97,8 +105,8 @@ class ProductController extends Controller
         {
             $model=News::model()->find(
                 array(
-                    'condition'=>'id > :id AND audit = 1',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id)),
+                    'condition'=>'id > :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
                 )
             );
         }
@@ -106,8 +114,8 @@ class ProductController extends Controller
         {
             $model=News::model()->find(
                 array(
-                    'condition'=>'id = :id AND audit = 1',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id)),
+                    'condition'=>'id = :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
                 )
             );
         }
@@ -120,8 +128,8 @@ class ProductController extends Controller
         {
             $model=News::model()->find(
                 array(
-                    'condition'=>'id = :id AND audit = 1',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id)),
+                    'condition'=>'id = :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
+                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
                 )
             );
 

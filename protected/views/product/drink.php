@@ -16,7 +16,7 @@
             <p class="secpro_txt"><?=$model->content;?></p>
         </div>
         <div class="cs-clear video">
-            <embed src="http://player.youku.com/player.php/Type/Folder/Fid/22171680/Ob/1/sid/XNzAyMDEwMDg0/v.swf" quality="high" width="520" height="400" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+            <?=$model->source_url;?>
         </div>
     </div>
 </div>

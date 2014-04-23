@@ -58,9 +58,9 @@
         </td>
     </tr>
     <tr>
-        <td class="leftTd">预览1</td>
+        <td class="leftTd">预览</td>
         <td>
-            <?php echo CHtml::image($model->photo1!=''?yii::app()->baseUrl.$model->photo1:yii::app()->baseUrl.'/style/admin/images/noPhoto.png',$model->title,array('id'=>'photoPreview1','class'=>'photoPreview','height'=>'50px'));?>
+            <?php echo CHtml::image($model->photo1!=''?$model->photo1:yii::app()->baseUrl.'/style/admin/images/noPhoto.png',$model->title,array('id'=>'photoPreview1','class'=>'photoPreview','height'=>'50px'));?>
             <?php echo CHtml::ajaxLink(
                 '删除',
                 array('/admin/news/photoDelete'),
@@ -104,9 +104,9 @@
         </td>
     </tr>
     <tr>
-        <td class="leftTd" width="100"><?php echo $form->labelEx($model,'source_url'); ?></td>
+        <td class="leftTd"><?php echo $form->labelEx($model,'source_url'); ?></td>
         <td>
-            <?php echo $form->textField($model,'source_url',array('value'=>$model->source_url,'class'=>'commonText'));?>
+            <?php echo CHtml::activeTextArea($model,'source_url',array('value'=>$model->source_url,'class'=>'textArea'));?>
             <?php echo $form->error($model,'source_url'); ?>
         </td>
     </tr>
