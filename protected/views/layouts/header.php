@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="page">
-    <div class="phd">
+    <div class="phd" style="top:-97px;" data-animate="top:0" data-time="500" data-easing="easeOutQuart">
         <div class="nav cs-clear">
             <?php
                 $model=Menu::model()->getRootList();

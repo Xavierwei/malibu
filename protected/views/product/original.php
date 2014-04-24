@@ -1,12 +1,3 @@
-<?php Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/fontend/js/jquery-1.4.2.min.js");?>
-<?php Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/fontend/js/jquery.jcarousel.min.js");?>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('#mycarousel').jcarousel({
-            wrap: 'circular'
-        });
-    });
-</script>
 <!--  -->
 <div class="pbd">
     <div class=" crumbs"><a href="<?=Yii::app()->createUrl(Yii::app()->controller->id);?>">返回产品列表</a></div>
