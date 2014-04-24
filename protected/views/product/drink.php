@@ -15,6 +15,9 @@
             <h2 class="protit "><?=$model->title;?></h2>
             <p class="secpro_txt"><?=$model->content;?></p>
         </div>
+        <div class="share cs-clear">
+            <a href="#"><img src="img/share_weibo.png" /></a>
+        </div>
         <div class="cs-clear video">
             <?=$model->source_url;?>
         </div>

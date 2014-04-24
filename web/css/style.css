@@ -7,7 +7,7 @@
 /* Reset
 ================================================================================================= */
 html{background: #fff;}
-body{font-family:"Microsoft Yahei",simsun,arial,sans-serif;color:#333;font-size:12px;line-height:1.666em;background: url('../img/hdbg.jpg') no-repeat top center;}
+body{font-family:"Microsoft Yahei",simsun,arial,sans-serif;color:#542a08;font-size:12px;line-height:1.666em;background: url('../img/hdbg.jpg') no-repeat top center;}
 h1,h2,h3{font-size:100%;}
 body,h1,h2,h3,h4,ul,li,p,img,div{margin:0;padding:0;border:0;}
 img{margin:0;line-height:normal;}
@@ -35,12 +35,18 @@ a:hover{color:#018b85}
 ================================================================================================= */
 .page{width:100%;margin:0 auto;position: relative;}
 .phd{position: relative;width:760px;margin: 0 auto}
-	.nav{background: url('../img/navbg.png') no-repeat;margin: 0 auto;width:432px;height:97px;padding:0 0 0 116px;}
-	.nav a{width:124px;height: 25px;text-align: center;color:#a69d9b;font-size: 13px;float:left;margin:20px 0 0;line-height: 25px;}
-	.nav a.on{background: url('../img/navon.png') no-repeat;color:#fff}
+	.nav{background: url('../img/navbg.png') no-repeat;margin: 0 auto;width:440px;height:97px;padding:0 0 0 110px;}
+	.nav a{width:130px;height: 25px;text-align: center;color:#a69d9b;font-size: 13px;float:left;margin:20px 0 0;}
+	/*.nav a.on{background: url('../img/navon.png') no-repeat;color:#fff}*/
+	.nav1,.nav2,.nav3{background: url('../img/nav.png') no-repeat;width: 130px;height: 25px;overflow: hidden;line-height: 400em}
+	.nav2{background-position: 0 -25px;}
+	.nav3{background-position: 0 -50px;}
+	.nav1.on{background-position: -130px -0px;}
+	.nav2.on{background-position: -130px -25px;}
+	.nav3.on{background-position: -130px -50px;}
 	.tmalllink{background: url('../img/tmalllink.png') no-repeat;width: 78px;height: 27px;position: absolute;right:24px;top: 28px;}
 	.tmalllink:hover{opacity: 0.8}
-
+.pbd{padding:0 0 20px}
 
 /* sec_propage Used
 ================================================================================================= */
@@ -70,14 +76,13 @@ a:hover{color:#018b85}
 	.secRUM_info{float: right;width:430px;color:#542a08;padding:8px 0 0}
 	.secDrink_pho{width: 130px;float: left;padding:0 0 30px;}
 	.secDrink_info{float: right;width: 390px;padding:0 0 30px;}
-.crumbs{text-align: right;width: 520px;margin: 0 auto;height: 40px;}
+.crumbs{text-align: right;width: 520px;margin: 0 auto;height: 40px;line-height: 24px;}
 	.crumbs a{color:#00aba4}
-		.crumbs_drink{background: url('../img/crumbs_drink.png') no-repeat right;}
-			.crumbs_drink a{color:#fff;}
-
+		.crumbs_drink{background: url('../img/crumbs_drink.png') no-repeat right;height: 25px;}
+			.crumbs_drink a{color:#fff;padding:0 2px;}
 			.drinkicon{border:transparent 4px solid;display: inline-block;height: 0;width:0;vertical-align: middle;}
-			.drinkicon1{border-right:#fff solid 4px;margin: 0 1px 0 0;margin: 0 1px 0 0/9}
-			.drinkicon2{border-left:#fff solid 4px;margin: 0 0 0 1px}
+			.drinkicon1{border-right:#fff solid 4px;margin: 0 4px 0 0;margin: 0 1px 0 0/9}
+			.drinkicon2{border-left:#fff solid 4px;margin: 0 0 0 4px}
 			.crumbs_drink a:hover{color:#a12e0d;}
 			.crumbs_drink a:hover .drinkicon1{border-right:#a12e0d solid 4px;}
 			.crumbs_drink a:hover .drinkicon2{border-left:#a12e0d solid 4px;}
@@ -95,7 +100,8 @@ a:hover{color:#018b85}
 .jcarousel-clip{width: 330px;height: 160px;overflow: hidden}
 .jcarousel-prev{background: url('../img/prev.png') no-repeat;left:-30px;width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
 .jcarousel-next{background: url('../img/next.png') no-repeat;right:-30px;width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
-
+.share{padding:10px 0;}
+	.share a{float: right;}
 
 /* sec_home Used
 ================================================================================================= */
@@ -108,7 +114,7 @@ a:hover{color:#018b85}
 .shade{background: #999;opacity: 0.6;filter:alpha(opacity=60); position: fixed;left:0;right: 0;top: 0;bottom: 0;z-index: 15;}
 .pop{background:#fff;position: fixed;left:50%;top:50%;z-index:20;font-size: 14px;color:#666;width: 300px;height: 306px;margin: -150px 0 0 -150px}
 	.pop h1{color:#e64415;font-size: 25px;text-align: center;line-height: 50px;padding:40px 0 0;}
-	.popcon{width:220px;margin: 20px auto 0;line-height: 24px}
+	.popcon{width:225px;margin: 20px auto 0;line-height: 24px}
 		.ageform{padding:0 0 5px;}
 			.ipt{border:#eee solid 1px;height: 33px;width: 60px;color:#e64415;font-size: 21px;text-align: center;float:left;margin-right: 5px;
 				box-shadow:1px 1px 2px #aaa inset;-webkit-box-shadow:1px 1px 2px #aaa inset;-moz-box-shadow:1px 1px 2px #aaa inset;-ms-box-shadow:1px 1px 2px #aaa inset;
