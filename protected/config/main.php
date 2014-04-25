@@ -136,7 +136,7 @@ return array(
                 array(  //开启debug扩展
                     'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
                     // Access is restricted by default to the localhost
-                    'ipFilters'=>array('172.16.111.87', '88.23.23.0/24'),
+                    'ipFilters'=>array('127.0.0.1', '88.23.23.0/24'),
                 ),
 				array(
 					'class'=>'CFileLogRoute',

@@ -34,6 +34,13 @@
 				<?php echo $form->error($model,'category_id'); ?>
 			</td>
 		</tr>
+        <tr>
+            <td class="leftTd"><?php echo $form->labelEx($model,'description'); ?></td>
+            <td colspan="5">
+                <?php echo CHtml::activeTextArea($model,'description',array('value'=>$model->description,'class'=>'textArea'));?>
+                <?php echo $form->error($model,'description'); ?>
+            </td>
+        </tr>
 		<tr>
 			<td class="leftTd"><?php echo '图片' ?></td>
 			<td>
@@ -264,20 +271,13 @@
 				<?php echo $form->error($model,'audit'); ?>
 			</td>
 		</tr>
-		<tr>
-			<td class="leftTd" width="100"><?php echo $form->labelEx($model,'hit'); ?></td>
-            <td colspan="5">
-				<?php echo $form->textField($model,'hit',array('value'=>$model->hit,'class'=>'commonText'));?>
-				<?php echo $form->error($model,'hit'); ?>
-			</td>
-		</tr>
-		<tr>
-			<td class="leftTd"><?php echo $form->labelEx($model,'description'); ?></td>
-            <td colspan="5">
-				<?php echo CHtml::activeTextArea($model,'description',array('value'=>$model->description,'class'=>'textArea'));?>
-				<?php echo $form->error($model,'description'); ?>
-			</td>
-		</tr>
+<!--		<tr>-->
+<!--			<td class="leftTd" width="100">--><?php //echo $form->labelEx($model,'hit'); ?><!--</td>-->
+<!--            <td colspan="5">-->
+<!--				--><?php //echo $form->textField($model,'hit',array('value'=>$model->hit,'class'=>'commonText'));?>
+<!--				--><?php //echo $form->error($model,'hit'); ?>
+<!--			</td>-->
+<!--		</tr>-->
 		<tr>
 			<td class="leftTd"><?php echo $form->labelEx($model,'keyword'); ?></td>
             <td colspan="5">

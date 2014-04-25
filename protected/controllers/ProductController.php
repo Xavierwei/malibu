@@ -137,17 +137,4 @@ class ProductController extends Controller
         }
 
     }
-
-
-	public function loadModel()
-	{
-		if($this->_model===null)
-		{
-			$this->_model=Site::model()->findByPk(1);
-		}
-		if($this->_model===null){
-			throw new CHttpException(404,'LoadModel无法加载模型');
-		}
-		return $this->_model;
-	}
 }

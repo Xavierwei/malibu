@@ -30,13 +30,13 @@
 <!--  -->
 <!--IE6透明判断-->
 <!--[if IE 6]>
-<script src="style/fontend/js/DD_belatedPNG.js"></script>
+<?php Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/fontend/js/DD_belatedPNG.js");?>
 <script>
     DD_belatedPNG.fix('*');
     document.execCommand("BackgroundImageCache", false, true);
 </script>
 <![endif]-->
-<?php 
+<?php
 foreach (array("jquery-1.8.3.min.js","jquery.easing.1.3.js","jquery.jcarousel.min.js","main.js",) as $key => $file) {
 	Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/fontend/js/$file");
 }

@@ -37,26 +37,18 @@
             </div>
         </div>
         <!--  -->
+        <?php if($wallModel):?>
         <div class="media_side">
             <div class="media_sidetit"></div>
-            <div class="mod mod_wallpaper">
-                <a href="#">
-                    <img src="style/fontend/img/demo1.jpg" />
-                    <p>点击下载</p>
-                </a>
-            </div>
-            <div class="mod mod_wallpaper">
-                <a href="#">
-                    <img src="style/fontend/img/demo1.jpg" />
-                    <p>点击下载</p>
-                </a>
-            </div>
-            <div class="mod mod_wallpaper">
-                <a href="#">
-                    <img src="style/fontend/img/demo1.jpg" />
-                    <p>点击下载</p>
-                </a>
-            </div>
+            <?php foreach($wallModel as $key => $value):?>
+                <div class="mod mod_wallpaper">
+                    <a href="#">
+                        <img width="140" height="87" src="<?=$value->photo1;?>" />
+                        <p>点击下载</p>
+                    </a>
+                </div>
+            <?php endforeach;?>
         </div>
+        <?php endif;?>
     </div>
 </div>

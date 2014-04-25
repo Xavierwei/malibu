@@ -31,20 +31,31 @@ class MediaController extends Controller
 
 	public function actionIndex()
 	{
-        $model=Menu::model()->findByPk(1);              //1为马利宝品牌
-		$this->render('index',array('model'=>$model));
+        // wall 为椰子味朗姆预调酒
+        $wallMenu=Menu::model()->find(
+            array(
+                'condition'=>'component = :component',
+                'params'=>array(':component'=>'wall'),
+            )
+        );
+        if($wallMenu)
+        {
+            $wallModel=News::model()->findAll(
+                array(
+                    'order'=>'update_time DESC',
+                    'limit'=>'6',
+                    'condition'=>'menu_id = :menu_id AND audit = 1',        //audit 1表示已经审核
+                    'params'=>array(':menu_id'=>$wallMenu->id),
+                )
+            );
+        }
+
+
+//        echo "<pre>";
+//        print_r($wallModel);
+        $this->render('index',array('wallModel'=>$wallModel));
 	}
 
 
-	public function loadModel()
-	{
-		if($this->_model===null)
-		{
-			$this->_model=Site::model()->findByPk(1);
-		}
-		if($this->_model===null){
-			throw new CHttpException(404,'LoadModel无法加载模型');
-		}
-		return $this->_model;
-	}
+
 }

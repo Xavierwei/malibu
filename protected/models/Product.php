@@ -18,6 +18,7 @@ class Product extends CActiveRecord
 		return array(
 			array('title','unique','on'=>'insert,update'),
 			array('title,category_id,content,audit,hot,recommend,photo1,photo2,photo3,photo4,photo5,hit,comment_number,description,keyword,create_time,update_time','default'),
+            array('description','length','max'=>255),
 			array('title,category_id','required','on'=>'insert,update'),
 			array('category_id','numerical','integerOnly'=>true,'min'=>1,'on'=>'insert,update'),
 			array('hit','numerical','integerOnly'=>true,'min'=>0,'on'=>'insert,update'),
