@@ -188,7 +188,7 @@ $(function(){
     // panel event
 
     if( !LP.getCookie('_age_checked_') ){
-        showAgeCheckPanel();
+        //showAgeCheckPanel();
     }
 
 });

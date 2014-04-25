@@ -16,7 +16,7 @@
             <p class="secpro_txt"><?=$model->content;?></p>
         </div>
         <div class="share cs-clear">
-            <a href="#"><img src="img/share_weibo.png" /></a>
+            <a target="_blank" href="http://service.weibo.com/share/share.php?title=<?=$model->title;?>"><img src="<?=Yii::app()->baseUrl;?>/style/fontend/img/share_weibo.png" /></a>
         </div>
         <div class="cs-clear video">
             <?=$model->source_url;?>

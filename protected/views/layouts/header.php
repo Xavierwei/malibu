@@ -28,5 +28,5 @@
                 }
             ?>
         </div>
-        <a href="#" class="tmalllink"></a>
+        <a target="_blank" href="http://brand.tmall.com/brandInfo.htm?spm=a220m.1000858.0.0.W93toE&brandId=4533618&scm=1048.1.1.12&rn=d828f0527b0f12f299928ff64e8e1fbc" class="tmalllink"></a>
     </div>

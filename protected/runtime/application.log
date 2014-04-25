@@ -2854,3 +2854,46 @@ Stack trace:
 #11 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
 #12 /Applications/MAMP/htdocs/malibu/index.php(11): CWebApplication->run()
 REQUEST_URI=/malibu/product/drink/5.html
+2014/04/25 06:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost:8888/malibu/style/fontend/css/style.css
+---
+2014/04/25 06:23:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost:8888/malibu/style/fontend/css/style.css
+---
+2014/04/25 06:23:31 [error] [php] Undefined index: prev (/Applications/MAMP/htdocs/malibu/protected/controllers/ProductController.php:95)
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#3 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#6 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#9 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): ProductController->run()
+#10 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/malibu/index.php(11): CWebApplication->run()
+REQUEST_URI=/malibu/product/drink/3.html
+2014/04/25 06:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost:8888/malibu/style/fontend/css/style.css
+---
