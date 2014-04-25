@@ -27,9 +27,10 @@ a:hover{color:#018b85}
 
 /* bg Used
 ================================================================================================= */
-.bgtl{background: url('../img/bgtl.png') no-repeat;width: 79px;height: 159px;position:fixed;left:0;top:0}
-.bgbr{background: url('../img/bgbr.png') no-repeat;width: 128px;height:190px;position: fixed;bottom:0;right:0}
-.bottomlogo{position: fixed;background: url('../img/bottomlogo.png') no-repeat;width: 66px;height: 54px;left:10px;bottom:10px}
+body{height: 100%;width: 100%}
+.bgtl{background: url('../img/bgtl.png') no-repeat;width: 79px;height: 159px;position:fixed;left:0;top:0;_position:absolute;}
+.bgbr{background: url('../img/bgbr.png') no-repeat;width: 128px;height:190px;position: fixed;bottom:0;right:0;_position:absolute;}
+.bottomlogo{position: fixed;background: url('../img/bottomlogo.png') no-repeat;width: 66px;height: 54px;left:10px;bottom:10px;_position:absolute;}
 
 /* page Used
 ================================================================================================= */
@@ -111,17 +112,17 @@ a:hover{color:#018b85}
 	.sechome_info .protit{font-size: 19px;text-align: left;}
 
 
-.shade{background: #999;opacity: 0.6;filter:alpha(opacity=60); position: fixed;left:0;right: 0;top: 0;bottom: 0;z-index: 15;}
-.pop{background:#fff;position: fixed;left:50%;top:50%;z-index:20;font-size: 14px;color:#666;width: 300px;height: 306px;margin: -150px 0 0 -150px}
+.shade{background: #999;opacity: 0.6;filter:alpha(opacity=60); position: fixed;left:0;right: 0;top: 0;bottom: 0;z-index: 15;_position:absolute;width: 100%;height: 100%}
+.pop{background:#fff;position: fixed;left:50%;top:50%;z-index:20;font-size: 14px;color:#666;width: 300px;height: 306px;margin: -150px 0 0 -150px;_position:absolute;}
 	.pop h1{color:#e64415;font-size: 25px;text-align: center;line-height: 50px;padding:40px 0 0;}
         .age-error h1{padding-top:100px;}
         .age-error .return{margin-right:123px;}
-        .popcon{width:225px;font-size: 10px;-webkit-text-size-adjust:none;margin: 20px auto 0;line-height: 24px}
+        .popcon{width:225px;font-size: 12px;-webkit-text-size-adjust:none;margin: 20px auto 0;line-height: 24px}
         .ageform{padding:0 0 5px;}
 			.ipt{border:#eee solid 1px;height: 33px;width: 60px;color:#e64415;font-size: 21px;text-align: center;float:left;margin-right: 5px;
 				box-shadow:1px 1px 2px #aaa inset;-webkit-box-shadow:1px 1px 2px #aaa inset;-moz-box-shadow:1px 1px 2px #aaa inset;-ms-box-shadow:1px 1px 2px #aaa inset;
 				border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;}
-			.ipt1{width: 78px}
+			.ipt1{width: 75px}
 		.poptips{color:#322;float: left;}
 		.popcheck{float: right;vertical-align: middle;}
 			.popcheck input{float: left;margin: 5px 2px 0 0}
