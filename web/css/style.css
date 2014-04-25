@@ -80,7 +80,7 @@ a:hover{color:#018b85}
 	.crumbs a{color:#00aba4}
 		.crumbs_drink{background: url('../img/crumbs_drink.png') no-repeat right;height: 25px;}
 			.crumbs_drink a{color:#fff;padding:0 2px;}
-			.drinkicon{border:transparent 4px solid;display: inline-block;height: 0;width:0;vertical-align: middle;}
+			.drinkicon{border:transparent 4px solid;display: inline-block;height: 0;width:0;vertical-align: middle;overflow: hidden}
 			.drinkicon1{border-right:#fff solid 4px;margin: 0 4px 0 0;margin: 0 1px 0 0/9}
 			.drinkicon2{border-left:#fff solid 4px;margin: 0 0 0 4px}
 			.crumbs_drink a:hover{color:#a12e0d;}
@@ -153,3 +153,6 @@ a:hover{color:#018b85}
 		border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;-o-border-radius: 3px;}
 
 
+
+
+.waiting{background: url('../img/waiting.jpg') no-repeat;width:400px;height: 330px;margin:30px auto 0 }

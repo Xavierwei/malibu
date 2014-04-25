@@ -8,12 +8,14 @@
         <a href="<?=Yii::app()->createUrl(Yii::app()->controller->id.'/Original');?>">返回马利宝朗姆酒介绍</a>
     </div>
     <div class="section sec_pro sec_drink cs-clear">
-        <div class="secDrink_pho">
-            <img src="<?=$model->photo1?>" width="94" />
-        </div>
-        <div class="secDrink_info">
-            <h2 class="protit "><?=$model->title;?></h2>
-            <p class="secpro_txt"><?=$model->content;?></p>
+        <div class=" cs-clear">
+            <div class="secDrink_pho">
+                <img src="<?=$model->photo1?>" width="94" />
+            </div>
+            <div class="secDrink_info">
+                <h2 class="protit "><?=$model->title;?></h2>
+                <p class="secpro_txt"><?=$model->content;?></p>
+            </div>
         </div>
         <div class="share cs-clear">
             <a target="_blank" href="http://service.weibo.com/share/share.php?title=<?=$model->title;?>"><img src="<?=Yii::app()->baseUrl;?>/style/fontend/img/share_weibo.png" /></a>
