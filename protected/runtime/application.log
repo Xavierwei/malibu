@@ -3020,3 +3020,12 @@ Stack trace:
 REQUEST_URI=/upload/image/news/201404/20140423022134_19893.jpg
 HTTP_REFERER=http://127.0.0.1/admin/news/edit/id/7.html
 ---
+2014/04/25 14:01:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/malibu/
+---
