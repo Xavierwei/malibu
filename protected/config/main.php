@@ -69,7 +69,7 @@ return array(
 			//'enableCookieValidation' => true,
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=yii',
+			'connectionString' => 'mysql:host=localhost;dbname=malibu',
 			'emulatePrepare' => true,
             'schemaCachingDuration'=>3600,  // 开启表结构缓存（schema caching）提高性能
             'schemaCacheID'=>'MemCache',    //设置缓存名称
@@ -91,13 +91,13 @@ return array(
         ),
 
         //缓存
-        "MemCache" => array(
-            'class'=>'system.caching.CMemCache',
-            'useMemcached'=>false, //使用memcache，不使用memcached
-            "servers" => array(
-                array("host" => "127.0.0.1","port" => "11211","weight" => 1),
-            ),
-        ),
+//        "MemCache" => array(
+//            'class'=>'system.caching.CMemCache',
+//            'useMemcached'=>false, //使用memcache，不使用memcached
+//            "servers" => array(
+//                array("host" => "127.0.0.1","port" => "11211","weight" => 1),
+//            ),
+//        ),
 
 		'session' => array(
             'class' => 'system.web.CDbHttpSession',

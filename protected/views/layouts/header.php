@@ -17,12 +17,14 @@
             <?php
                 $model=Menu::model()->getRootList();
                 $controller=Yii::app()->controller->id;
+                $index = 1;
                 foreach($model as $key =>$value)
                 {
                     if($controller == $value->component)
-                        echo '<a href="' . Yii::app()->createUrl($value->component) . '" class="on">' . $value->title .'</a>';
+                        echo '<a href="' . Yii::app()->createUrl($value->component) . '" class="nav'. $index .' on">' . $value->title .'</a>';
                     else
-                        echo '<a href="' . Yii::app()->createUrl($value->component) . '">' . $value->title .'</a>';
+                        echo '<a href="' . Yii::app()->createUrl($value->component) . '" class="nav'. $index .'">' . $value->title .'</a>';
+                    $index++;
                 }
             ?>
         </div>
