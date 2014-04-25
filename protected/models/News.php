@@ -1,5 +1,4 @@
 <?php
-
 class News extends CActiveRecord
 {
 

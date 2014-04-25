@@ -92,7 +92,7 @@ class ProductController extends Controller
             )
         );
 
-        if($_GET['prev']=='prev')
+        if(Yii::app()->request->getParam('prev')=='prev')
         {
             $model=News::model()->find(
                 array(
@@ -101,7 +101,7 @@ class ProductController extends Controller
                 )
             );
         }
-        elseif($_GET['next']=='next')
+        elseif(Yii::app()->request->getParam('next')=='next')
         {
             $model=News::model()->find(
                 array(

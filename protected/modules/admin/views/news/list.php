@@ -28,7 +28,7 @@
 			<th>图片</th>
 			<th><?php echo $form->labelEx($model,'title'); ?></th>
 			<th><?php echo $form->labelEx($model,'menu_id'); ?></th>
-			<th><?php echo $form->labelEx($model,'source_url'); ?></th>
+<!--			<th>--><?php //echo $form->labelEx($model,'source_url'); ?><!--</th>-->
 <!--			<th>--><?php //echo $form->labelEx($model,'hit'); ?><!--</th>-->
 <!--			<th>--><?php //echo $form->labelEx($model,'comment_number'); ?><!--</th>-->
 			<th><?php echo $form->labelEx($model,'update_time'); ?></th>
@@ -44,7 +44,7 @@
 <!--				<td width="100">--><?php //echo $item->photo2!=''?CHtml::image(Yii::app()->baseUrl.$item->photo2,$item->title,array('height'=>'40px')):'';?><!--</td>-->
 				<td><?php echo CHtml::link($item->title,array('/admin/news/edit/','id'=>$item->id)); ?></td>
 				<td><?php echo isset($item->menu->name)?$item->menu->name:'';?></td>
-				<td class="embed-set"><?=$item->source_url;?></td>
+<!--				<td class="embed-set">--><?//=$item->source_url;?><!--</td>-->
 <!--				<td>--><?php //echo $item->hit;?><!--</td>-->
 <!--				<td>--><?php //echo $item->comment_number;?><!--</td>-->
 				<td><?php echo date("Y-m-d",$item->update_time);?></td>

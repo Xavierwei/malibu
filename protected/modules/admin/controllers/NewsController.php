@@ -33,31 +33,34 @@ class NewsController extends Controller
 	public function actionList()
 	{
         $model=new News();
-        if($_GET['News']["menu_id"] || $_GET['News']["title"])
+        if(isset($_GET['News']))
         {
-            $model->menu_id=$_GET['News']["menu_id"];
-            $model->title=$_GET['News']["title"];
-
-            $criteria = new CDbCriteria();
-            $criteria->with = 'menu';
-
-            if($model->title)
+            if($_GET['News']["menu_id"] || $_GET['News']["title"])
             {
-                $criteria->addCondition("t.title LIKE :title");
-                $criteria->params[':title']= '%'.$model->title.'%';
-            }
+                $model->menu_id=$_GET['News']["menu_id"];
+                $model->title=$_GET['News']["title"];
 
-            if($model->menu_id)
-            {
-                $criteria->addCondition('menu_id = :menu_id');
-                $criteria->params[':menu_id']=$model->menu_id;
-            }
+                $criteria = new CDbCriteria();
+                $criteria->with = 'menu';
 
-            $count = News::model()->count($criteria);
-            $pager = new CPagination($count);
-            $pager->pageSize = 15;
-            $pager->applyLimit($criteria);
-            $data = News::model()->findAll($criteria);
+                if($model->title)
+                {
+                    $criteria->addCondition("t.title LIKE :title");
+                    $criteria->params[':title']= '%'.$model->title.'%';
+                }
+
+                if($model->menu_id)
+                {
+                    $criteria->addCondition('menu_id = :menu_id');
+                    $criteria->params[':menu_id']=$model->menu_id;
+                }
+
+                $count = News::model()->count($criteria);
+                $pager = new CPagination($count);
+                $pager->pageSize = 15;
+                $pager->applyLimit($criteria);
+                $data = News::model()->findAll($criteria);
+            }
         }
         else
         {
