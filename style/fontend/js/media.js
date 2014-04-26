@@ -23,7 +23,9 @@
         bindEvent:function(){
             $('.madiapho_slide').live({
                 'mouseenter':function(){
-                    $(this).children('.madia_arr').show()
+                    if($(this).children('.madiapho_list').children('li').length != 1){
+                        $(this).children('.madia_arr').show()
+                    }
                 },
                 'mouseleave':function(){
                     $(this).children('.madia_arr').hide()
