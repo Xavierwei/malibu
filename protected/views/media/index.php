@@ -9,23 +9,21 @@
                         <h2><?=$value->title;?></h2>
                         <h3><?=date('d M, Y  H:i',$value->update_time);?></h3>
                         <div class="madia_con">
-                            <img width="270" height="150" src="<?=$value->photo1;?>" />
+                            <div class="madiapho_slide">
+                                <ul class="madiapho_list">
+                                    <?php for($i=1;$i<=5;$i++):?>
+                                        <?php if($value->attributes['photo'.$i]):?><li><img src="<?=$value->attributes['photo'.$i];?>" /></li><?php endif;?>
+                                    <?php endfor;?>
+                                </ul>
+                                <div class="madia_arr madia_prev"></div>
+                                <div class="madia_arr madia_next"></div>
+                            </div>
                             <p><?=$value->description;?></p>
                         </div>
                         <div class="madia_read"><a href="#">Read more</a><?=$value->comment_number;?> comments</div>
                     </div>
                 <?php endforeach;?>
                 <!--  -->
-<!--                <div class="madia_page">-->
-<!--                    <a href="#" class="madia_prev">&lt;</a>-->
-<!--                    <a href="#">1</a>-->
-<!--                    <a href="#">2</a>-->
-<!--                    <a href="#">3</a>-->
-<!--                    <a href="#">4</a>-->
-<!--                    <a href="#">5</a>-->
-<!--                    <a href="#">6</a>-->
-<!--                    <a href="#" class="madia_next">&gt;</a>-->
-<!--                </div>-->
                 <div class="madia_page">
                     <?php
                     $this->widget('CLinkPager',array(
