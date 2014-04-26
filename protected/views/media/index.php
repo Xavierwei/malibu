@@ -60,4 +60,8 @@
         <?php endif;?>
     </div>
 </div>
-
+<script>
+    $('.madiapho_list').each(function(){
+        $(this).children('li').eq(0).addClass('on')
+    })
+</script>
