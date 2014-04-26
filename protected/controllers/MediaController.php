@@ -31,7 +31,7 @@ class MediaController extends Controller
 
 	public function actionIndex()
 	{
-        // wall 为椰子味朗姆预调酒
+        // wall 为墙纸下载
         $wallMenu=Menu::model()->find(
             array(
                 'condition'=>'component = :component',
@@ -50,10 +50,19 @@ class MediaController extends Controller
             );
         }
 
+        //news 为新闻
+        $criteria = new CDbCriteria();
+        $criteria->with = 'category';
+        $criteria->addCondition('component = :component AND t.audit=1');
+        $criteria->params=array(':component'=>'news');
+        $count = Product::model()->count($criteria);
+        $pager = new CPagination($count);
+        $pager->pageSize = 2;
+        $pager->applyLimit($criteria);
+        $newsModel = Product::model()->findAll($criteria);
 
-//        echo "<pre>";
-//        print_r($wallModel);
-        $this->render('index',array('wallModel'=>$wallModel));
+
+        $this->render('index',array('wallModel'=>$wallModel,'newsModel'=>$newsModel,'page'=>$pager));
 	}
 
 

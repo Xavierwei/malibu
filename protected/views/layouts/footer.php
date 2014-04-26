@@ -37,7 +37,12 @@
 </script>
 <![endif]-->
 <?php
-foreach (array("jquery-1.8.3.min.js","jquery.easing.1.3.js","jquery.jcarousel.min.js","main.js",) as $key => $file) {
+foreach (array("jquery-1.8.3.min.js",
+                        "jquery.easing.1.3.js",
+                         "jquery.jcarousel.min.js",
+                        "main.js",
+                        'media.js',
+                        'miain.js') as $key => $file) {
 	Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/fontend/js/$file");
 }
 ?>
