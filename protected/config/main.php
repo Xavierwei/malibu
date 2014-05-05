@@ -71,8 +71,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=c2malibu',
 			'emulatePrepare' => true,
-            // 'schemaCachingDuration'=>3600,  // 开启表结构缓存（schema caching）提高性能
-            // 'schemaCacheID'=>'MemCache',    //设置缓存名称
+            'schemaCachingDuration'=>3600,  // 开启表结构缓存（schema caching）提高性能
+            'schemaCacheID'=>'MemCache',    //设置缓存名称
             'enableProfiling' => true,                  //这个是用来记录日志的，会记录每一条语句执行的时间
             'enableParamLogging' => true,       //true表示包括sql语句的参数在内的信息都会记录到日志里，非常详细
 			'username' => 'root',
@@ -81,23 +81,18 @@ return array(
 			'tablePrefix' => 'v_',
 		),
 
-		'cache' => array(
+		'FileCache' => array(
         	'class' => 'system.caching.CFileCache',
-        	/*
-			'servers' => array(
-            	array('host' => '10.96.190.80', 'port' => 11211),
-			),
-			*/
         ),
 
         //缓存
-//        "MemCache" => array(
-//            'class'=>'system.caching.CMemCache',
-//            'useMemcached'=>false, //使用memcache，不使用memcached
-//            "servers" => array(
-//                array("host" => "127.0.0.1","port" => "11211","weight" => 1),
-//            ),
-//        ),
+       "MemCache" => array(
+           'class'=>'system.caching.CMemCache',
+           'useMemcached'=>false, //使用memcache，不使用memcached
+           "servers" => array(
+               array("host" => "127.0.0.1","port" => "11211","weight" => 1),
+           ),
+       ),
 
 		'session' => array(
             'class' => 'system.web.CDbHttpSession',

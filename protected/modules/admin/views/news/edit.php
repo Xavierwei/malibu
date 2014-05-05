@@ -48,7 +48,6 @@
                 'preview'=>'photoPreview1',
                 'delete'=>'photoDelete1',
                 'callback_url'=>Yii::app()->createUrl('/admin/news/photoSave'),
-
                 'parameters'=>array(
                     'id'=>$model->id,
                     'name'=>'photo1',

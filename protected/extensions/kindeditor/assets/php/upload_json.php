@@ -18,7 +18,7 @@ $save_path = isset($_GET['root'])&&$_GET['root']!=''?$php_path . $_GET['root'].'
 $save_url = isset($_GET['root'])&&$_GET['root']!=''?$php_url . $_GET['root'].'/upload/':$php_url . '/upload/';
 //定义允许上传的文件扩展名
 $ext_arr = array(
-	'image' => array('gif', 'jpg', 'jpeg', 'png', 'bmp'),
+	'image' => array('gif', 'jpg', 'jpeg', 'png'),
 	'flash' => array('swf', 'flv'),
 	'media' => array('swf', 'flv', 'mp3', 'wav', 'wma', 'wmv', 'mid', 'avi', 'mpg', 'asf', 'rm', 'rmvb'),
 	'file' => array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'htm', 'html', 'txt', 'zip', 'rar', 'gz', 'bz2'),
@@ -128,7 +128,44 @@ if (empty($_FILES) === false) {
 	$new_file_name = date("YmdHis") . '_' . rand(10000, 99999) . '.' . $file_ext;
 	//移动文件
 	$file_path = $save_path . $new_file_name;
-	if (move_uploaded_file($tmp_name, $file_path) === false) {
+    if($_GET['thumbWidth'] && $_GET['thumbHeight'])
+    {
+            $CreateFunction = "imagecreatefrom".($file_ext == 'jpg' ? 'jpeg' : $file_ext);
+            $SaveFunction = "image".($file_ext == 'jpg' ? 'jpeg' : $file_ext);
+            if (strtolower($CreateFunction) == "imagecreatefromgif"
+                && !function_exists("imagecreatefromgif")) {
+                alert("上传文件失败。");
+            } elseif (strtolower($CreateFunction) == "imagecreatefromjpeg"
+                && !function_exists("imagecreatefromjpeg")) {
+                alert("上传文件失败。");
+            } elseif (!function_exists($CreateFunction)) {
+                alert("上传文件失败。");
+            }
+
+            $Original = @$CreateFunction($tmp_name);
+            if (!$Original) {alert("上传文件失败。");}
+            $originalHeight = ImageSY($Original);
+            $originalWidth = ImageSX($Original);
+
+            $radio=$originalWidth>=$originalHeight?$originalWidth/$_GET['thumbWidth'] : $originalHeight/$_GET['thumbHeight'];
+            $thumbWidth=(int)$originalWidth/$radio;
+            $thumbHeight=(int)$originalHeight/$radio;
+            //$this->quality = $this->ext == 'png' ? intval($this->quality / 10.01) : $this->quality; //png质量必须为 0-9
+
+            if ($thumbWidth == 0) $thumbWidth = 1;
+            if ($thumbHeight == 0) $thumbHeight = 1;
+            $createdThumb = imagecreatetruecolor($_GET['thumbWidth'], $_GET['thumbHeight']);
+            $sx=$thumbWidth>$_GET['thumbWidth'] ? -($thumbWidth-$_GET['thumbWidth'])/2 : 0;
+            $sy=$thumbHeight>$_GET['thumbHeight'] ?  -($thumbHeight-$_GET['thumbHeight'])/2 : 0;
+            if ( !$createdThumb ) {alert("上传文件失败。");}
+            if ( !imagecopyresampled($createdThumb, $Original, $sx, $sy, 0, 0,
+                $thumbWidth, $thumbHeight, $originalWidth, $originalHeight) )
+            {alert("上传文件失败。");}
+            if (! $SaveFunction($createdThumb,$file_path) ) {
+                alert("上传文件失败。");
+            }
+    }
+    elseif(move_uploaded_file($tmp_name, $file_path) === false) {
 		alert("上传文件失败。");
 	}
 	@chmod($file_path, 0644);

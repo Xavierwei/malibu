@@ -109,6 +109,8 @@ class KindUploadWidget extends CInputWidget
 	public $callback_url;
 	public $parameters;
 	public $language = 'zh_CN';
+    public $thumbWidth  = NULL;
+    public $thumbHeight = NULL;
 
 
 	/**
@@ -132,12 +134,13 @@ class KindUploadWidget extends CInputWidget
 	 */
 	public function run()
 	{
+        $temp= ($this->thumbHeight && $this->thumbWidth)  ? "&thumbWidth={$this->thumbWidth}&thumbHeight={$this->thumbHeight}" : '';
 		$this->dir=explode('/',$this->dir);
 		$script ='KindEditor.ready(function(K){
 			var '.$this->id.'=K.uploadbutton({
 				button:K("#'.$this->id.'")[0],
 				fieldName : "imgFile",
-				url : "'.$this->assetsUrl.'/php/upload_json.php?root='.yii::app()->baseUrl.'&dir='.$this->dir[0].'&catalogue='.$this->dir[1].'",
+				url : "'.$this->assetsUrl.'/php/upload_json.php?root='.yii::app()->baseUrl.'&dir='.$this->dir[0].'&catalogue='.$this->dir[1].$temp.'",
 		        afterUpload : function(data) {
 	                if (data.error === 0) {
 	                   	var photo_url = K.formatUrl(data.url, "absolute");

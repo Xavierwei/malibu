@@ -55,7 +55,8 @@
                         'preview'=>'photoPreview1',
                         'delete'=>'photoDelete1',
                         'callback_url'=>Yii::app()->createUrl('/admin/product/photoSave'),
-
+                        'thumbWidth'=>270,
+                        'thumbHeight'=>150,
                         'parameters'=>array(
                             'id'=>$model->id,
                             'name'=>'photo1',
@@ -75,7 +76,8 @@
                     'preview'=>'photoPreview2',
                     'delete'=>'photoDelete2',
                     'callback_url'=>Yii::app()->createUrl('/admin/product/photoSave'),
-
+                    'thumbWidth'=>270,
+                    'thumbHeight'=>150,
                     'parameters'=>array(
                         'id'=>$model->id,
                         'name'=>'photo2',
@@ -95,7 +97,8 @@
                     'preview'=>'photoPreview3',
                     'delete'=>'photoDelete3',
                     'callback_url'=>Yii::app()->createUrl('/admin/product/photoSave'),
-
+                    'thumbWidth'=>270,
+                    'thumbHeight'=>150,
                     'parameters'=>array(
                         'id'=>$model->id,
                         'name'=>'photo3',
@@ -115,7 +118,8 @@
                     'preview'=>'photoPreview4',
                     'delete'=>'photoDelete4',
                     'callback_url'=>Yii::app()->createUrl('/admin/product/photoSave'),
-
+                    'thumbWidth'=>270,
+                    'thumbHeight'=>150,
                     'parameters'=>array(
                         'id'=>$model->id,
                         'name'=>'photo4',
@@ -135,7 +139,8 @@
                     'preview'=>'photoPreview5',
                     'delete'=>'photoDelete5',
                     'callback_url'=>Yii::app()->createUrl('/admin/product/photoSave'),
-
+                    'thumbWidth'=>270,
+                    'thumbHeight'=>150,
                     'parameters'=>array(
                         'id'=>$model->id,
                         'name'=>'photo5',
