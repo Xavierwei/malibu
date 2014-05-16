@@ -67,58 +67,54 @@ h1{font-size:18px;line-height:40px;font-family:'微软雅黑','黑体','宋体';
 
 /**头部样式**/
 .headContent{
-	height:72px;
-	font-size:12px;
-	line-height:22px;
-	text-align:left;
-	background:url(images/headLine2.jpg) left bottom repeat-x;
-}
-.headInner{
-	height:72px;
-	background:url(images/headBg.jpg)  right top no-repeat;
+    height: 85px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: left;
+    background: #666666;
 }
 .headLogo{
 	float:left;
 	width:167px;
 	height:48px;
 	padding:12px;
-	background:url(images/headLine.jpg)  left bottom repeat-x;
 	display:inline;
 }
 .nav{
 	float:left;
 	width:600px;
-	height:28px;
+	height:45px;
 	font-weight:bold;
 	font-size:12px;
-	color:#3b79b6;
+	color:#fff;
 	margin-top:40px;
 }
 .nav li{
 	float:left;
-	width:80px;
-	height:28px;
-	line-height:28px;
+    padding: 0px 15px 0px 15px;
+    font-weight: normal;
+	height:45px;
+	line-height:45px;
+    margin-right: 5px;
 	text-align:center;
-	background:url(images/navGrayBg.jpg) left top repeat-x;
-	margin-right:5px;
 	cursor:pointer;
 }
 .nav li.current,.nav li:hover{
-	background:url(images/navBg.jpg);
-	color:#ffffff;
+	background:#fff;
+	color:#666666;
 }
 .sessionInfo{
 	position: absolute;
 	right:0px;
-	top:12px;
 	width:200px;
-	height:40px;
-	line-height:40px;
+    height: 85px;
+    line-height: 85px;
 	color:#666;
 }
 
 .sessionInfo img{float:left;margin-right:8px;border-radius: 20px 20px 20px 20px;}
+.sessionInfo a{color: #fff;font-size: 13px;}
+
 
 /**左侧样式**/
 .sidebarContent{

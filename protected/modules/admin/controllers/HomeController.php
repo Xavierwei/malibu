@@ -42,6 +42,6 @@ class HomeController extends Controller
 
 	public function actionContent()
 	{
-		$this->redirect(array('site/index'));
+		$this->redirect(array('/admin/news/index/id/10'));
 	}
 }

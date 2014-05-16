@@ -25,19 +25,19 @@ class NewsController extends Controller
 		);
 	}
 
-	public function actionIndex()
+	public function actionIndex($id='')
 	{
-		$this->actionList();
+		$this->actionList($id);
 	}
 
-	public function actionList()
+	public function actionList($id='')
 	{
         $model=new News();
-        if(isset($_GET['News']))
+        if(isset($_GET['News'])  || $id)
         {
-            if($_GET['News']["menu_id"] || $_GET['News']["title"])
+            if($_GET['News']["menu_id"] || $_GET['News']["title"] || $id)
             {
-                $model->menu_id=$_GET['News']["menu_id"];
+                $model->menu_id=$_GET['News']["menu_id"] ? $_GET['News']["menu_id"] : $id ;
                 $model->title=$_GET['News']["title"];
 
                 $criteria = new CDbCriteria();

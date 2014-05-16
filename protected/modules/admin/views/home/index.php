@@ -8,16 +8,8 @@
 <?php Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/admin/script/admin.js");?>
 <?php Yii::app()->getClientScript()->registerCssFile(yii::app()->baseUrl."/style/admin/admin.css");?>
 </head>
-<frameset rows="72,*" cols="*" frameborder="0" border="0" framespacing="0">
+<frameset rows="90,*" cols="*" frameborder="0" border="0" framespacing="0">
 	<frame src="<?php echo Yii::app()->createUrl('admin/home/header');?>" frameborder="0" name="headFrame" scrolling="no" noresize>
-	<frameset cols="191,*" frameborder="0" border="0" framespacing="0">
-		<frame src="<?php echo Yii::app()->createUrl('admin/home/sidebar');?>" frameborder="0" name="sidebarFrame" scrolling="no" noresize>
-		<frame src="<?php echo Yii::app()->createUrl('admin/home/content');?>" frameborder="0" name="contentFrame">
-	</frameset>
-	<noframes>
-	<body>
-		<p></p>
-	</body>
-	</noframes>
+    <frame src="<?php echo Yii::app()->createUrl('admin/home/content');?>" frameborder="0" name="contentFrame">
 </frameset>
 </html>
