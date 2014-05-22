@@ -23,6 +23,7 @@ a:hover{color:#018b85}
 .cs-clear:before,
 .cs-clear:after{clear:both;content:".";font-size:0;display:block;height:0;overflow:hidden;visibility:hidden;}
 .fl{float: left}
+.fr{float: right;}
 .column{width:1000px;margin:0 auto;position: relative;}
 
 /* bg Used
@@ -167,3 +168,40 @@ body{height: 100%;width: 100%}
 
 
 .waiting{background: url('../img/waiting.jpg') no-repeat;width:400px;height: 330px;margin:30px auto 0 }
+
+
+
+
+
+
+/* activity Used
+================================================================================================= */
+.act_hd{background: url('../img/act_hd.jpg') no-repeat center 55px;width: 580px;height:268px;margin: 0 auto;padding: 0 0 0 85px;}
+	.act_hditem{float: left;width: 168px;}
+		.act_hdtit{background: url('../img/act_hdicon.png') no-repeat;height: 35px;width: 168px;font-size: 15px;color:#afabab;font-weight: bold;text-align: center;padding-top:120px;}
+		.act_hdicon2{background-position: -164px 0;padding-top:110px;height: 45px }
+		.act_hdicon3{background-position: -330px 0}
+		.act_hdbox{background: url('../img/act_hdbox.png') no-repeat;width: 162px;height: 88px;color:#542a08;text-align: center;padding: 25px 0 0;line-height: 14px;}
+			.act_hdbox a{color:#00aba4;padding:6px 0;display: block;}
+.act_award{width: 480px;margin: 0 auto 50px}
+	.act_awardtit{background: url('../img/act_awardtit.png') no-repeat;width: 130px;height: 45px;}
+	.act_wordtit{background: url('../img/act_linebg.png') no-repeat center bottom;color:#e64415;font-size: 20px;text-align: center;font-weight: bold;padding:15px 0;margin-bottom: 12px}
+	.act_videolist{width: 500px}
+		.act_videoitem{float: left;margin-right: 20px;}
+			.act_video{height: 150px;width: 146px;margin-bottom: 5px;}
+			.act_videoinfo{}
+				.act_infotiem{color:#e64415}
+				.act_infouser{font-size: 13px;}
+	.act_tips{font-weight: bold;text-align: center;padding: 20px 0;font-size: 14px;}
+.act_con{width: 480px;margin: 0 auto 60px}
+	.act_contit{background: url('../img/act_contit.png') no-repeat;width: 214px;height: 45px;}
+	.act_contxt{padding: 0 35px 10px;font-weight: bold;font-size: 13px;line-height: 15px;}
+		.act_contxt p{padding:8px 0}
+	.act_concarlist{position: relative;width: 490px;height: 250px;}
+		.act_videocar{overflow: hidden;width: 490px;height: 250px}
+			.act_concarlist .jcarousel-clip{width: 490px;height: 250px}
+				.act_convote a{color:#542a08}
+				.act_convote em{color:#e64415}
+			.act_votestatbg{background: url('../img/act_votestat.png') repeat-x; width: 60px;height: 12px;overflow: hidden}
+				.act_votestat{background: url('../img/act_votestat2.png') repeat-x;height: 12px;float: left;}
+
