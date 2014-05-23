@@ -204,4 +204,15 @@ body{height: 100%;width: 100%}
 				.act_convote em{color:#e64415}
 			.act_votestatbg{background: url('../img/act_votestat.png') repeat-x; width: 60px;height: 12px;overflow: hidden}
 				.act_votestat{background: url('../img/act_votestat2.png') repeat-x;height: 12px;float: left;}
-
+.act_malivand{margin: 0 auto 80px}
+	.act_maltit{font-size: 22px;font-weight: bold;color:#e64415;line-height: 35px;height: 45px;width: 480px;margin: 0 auto}
+	.act_malvideo{width: 480px;margin: 10px auto}
+	.act_maltxt{width: 430px;margin:10px auto 30px;font-weight: bold;font-size: 13px;line-height: 15px;}
+	/**/
+	.act_malintro{width: 556px;margin: -40px auto 0;}
+		.act_malitem{font-weight: bold;width: 160px;text-align: center;float: left;padding:130px 12px 0;background: url('../img/act_malintro.png') no-repeat;}
+		.act_malitem1{background-position: 70px 0}
+		.act_malitem2{background-position: -106px 0}
+		.act_malitem3{background-position: -292px 0}
+			.act_malitem h2{font-size: 14px;color:#e64415;}
+			.act_malitem h3{font-size: 14px;padding: 0 0 22px;}
