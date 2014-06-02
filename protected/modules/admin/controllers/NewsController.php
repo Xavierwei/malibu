@@ -35,10 +35,10 @@ class NewsController extends Controller
         $model=new News();
         if(isset($_GET['News'])  || $id)
         {
-            if($_GET['News']["menu_id"] || $_GET['News']["title"] || $id)
+            if(isset($_GET['News']["menu_id"]) || isset($_GET['News']["title"]) || $id)
             {
-                $model->menu_id=$_GET['News']["menu_id"] ? $_GET['News']["menu_id"] : $id ;
-                $model->title=$_GET['News']["title"];
+                $model->menu_id=isset($_GET['News']["menu_id"]) ? $_GET['News']["menu_id"] : $id ;
+                $model->title=isset($_GET['News']["title"]) ? $_GET['News']["title"] : '';
 
                 $criteria = new CDbCriteria();
                 $criteria->with = 'menu';

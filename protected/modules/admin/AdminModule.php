@@ -63,7 +63,13 @@ class AdminModule extends CWebModule
 //						array('name'=>'广告管理','com'=>'advertisement','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
 //						array('name'=>'广 告 位','com'=>'advertising','root'=>0,'list'=>1,'creat'=>1,'edit'=>0,'audit'=>1,'visible'=>1),
 //						array('name'=>'站 内 信','com'=>'message','root'=>0,'list'=>1,'creat'=>0,'edit'=>0,'audit'=>0,'visible'=>1)
-					)
+					),
+                    array(
+                        array('name'=>'视频大赛','com'=>'activities/index','root'=>1,'list'=>0,'creat'=>0,'edit'=>0,'audit'=>1,'visible'=>1),
+                    ),
+                    array(
+                        array('name'=>'添加视频','com'=>'activities/creat','root'=>1,'list'=>0,'creat'=>0,'edit'=>0,'audit'=>1,'visible'=>1),
+                    ),
 				)
 			)
 		);

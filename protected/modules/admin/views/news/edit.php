@@ -30,7 +30,7 @@
     <tr>
         <td class="leftTd"><?php echo $form->labelEx($model,'menu_id'); ?></td>
         <td>
-            <?php echo $form->dropDownList($model,'menu_id',Menu::model()->getMenuList('0','请选择'),array('class'=>'select')); ?>
+            <?php echo $form->dropDownList($model,'menu_id',Menu::model()->getMenuList('12','马利宝墙纸下载'),array('class'=>'select')); ?>
             <?php echo $form->error($model,'menu_id'); ?>
         </td>
     </tr>
@@ -77,38 +77,38 @@
             ?>
         </td>
     </tr>
-    <tr>
-        <td class="leftTd" width="100"><?php echo $form->labelEx($model,'content'); ?></td>
-        <td>
-            <?php echo CHtml::activeTextArea($model,'content',array('value'=>$model->content));?>
-            <?php echo $form->error($model,'content'); ?>
-            <?php
-            $this->widget('ext.kindeditor.KindEditorWidget',array(
-                'id'=>'News_content',
-                'items' => array(
-                    'uploadJson'=>Yii::app()->assetManager->publish(Yii::getPathOfAlias('ext.kindeditor.assets')).'/php/upload_json.php?root='.yii::app()->baseUrl.'&catalogue=news_content',
-                    'width'=>'670px',
-                    'height'=>'200px',
-                    'allowFileManager'=>false,
-                ),
-            ));
-            ?>
-        </td>
-    </tr>
-    <tr>
-        <td class="leftTd" width="100"><?php echo $form->labelEx($model,'source'); ?></td>
-        <td>
-            <?php echo $form->textField($model,'source',array('value'=>$model->source,'class'=>'commonText'));?>
-            <?php echo $form->error($model,'source'); ?>
-        </td>
-    </tr>
-    <tr>
-        <td class="leftTd"><?php echo $form->labelEx($model,'source_url'); ?></td>
-        <td>
-            <?php echo CHtml::activeTextArea($model,'source_url',array('value'=>$model->source_url,'class'=>'textArea'));?>
-            <?php echo $form->error($model,'source_url'); ?>
-        </td>
-    </tr>
+<!--    <tr>-->
+<!--        <td class="leftTd" width="100">--><?php //echo $form->labelEx($model,'content'); ?><!--</td>-->
+<!--        <td>-->
+<!--            --><?php //echo CHtml::activeTextArea($model,'content',array('value'=>$model->content));?>
+<!--            --><?php //echo $form->error($model,'content'); ?>
+<!--            --><?php
+//            $this->widget('ext.kindeditor.KindEditorWidget',array(
+//                'id'=>'News_content',
+//                'items' => array(
+//                    'uploadJson'=>Yii::app()->assetManager->publish(Yii::getPathOfAlias('ext.kindeditor.assets')).'/php/upload_json.php?root='.yii::app()->baseUrl.'&catalogue=news_content',
+//                    'width'=>'670px',
+//                    'height'=>'200px',
+//                    'allowFileManager'=>false,
+//                ),
+//            ));
+//            ?>
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td class="leftTd" width="100">--><?php //echo $form->labelEx($model,'source'); ?><!--</td>-->
+<!--        <td>-->
+<!--            --><?php //echo $form->textField($model,'source',array('value'=>$model->source,'class'=>'commonText'));?>
+<!--            --><?php //echo $form->error($model,'source'); ?>
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td class="leftTd">--><?php //echo $form->labelEx($model,'source_url'); ?><!--</td>-->
+<!--        <td>-->
+<!--            --><?php //echo CHtml::activeTextArea($model,'source_url',array('value'=>$model->source_url,'class'=>'textArea'));?>
+<!--            --><?php //echo $form->error($model,'source_url'); ?>
+<!--        </td>-->
+<!--    </tr>-->
     <tr>
         <td class="leftTd" width="100"><?php echo $form->labelEx($model,'audit'); ?></td>
         <td>
@@ -116,27 +116,27 @@
             <?php echo $form->error($model,'audit'); ?>
         </td>
     </tr>
-    <tr>
-        <td class="leftTd" width="100"><?php echo $form->labelEx($model,'hit'); ?></td>
-        <td>
-            <?php echo $form->textField($model,'hit',array('value'=>$model->hit,'class'=>'commonText'));?>
-            <?php echo $form->error($model,'hit'); ?>
-        </td>
-    </tr>
-    <tr>
-        <td class="leftTd"><?php echo $form->labelEx($model,'description'); ?></td>
-        <td>
-            <?php echo CHtml::activeTextArea($model,'description',array('value'=>$model->description,'class'=>'textArea'));?>
-            <?php echo $form->error($model,'description'); ?>
-        </td>
-    </tr>
-    <tr>
-        <td class="leftTd"><?php echo $form->labelEx($model,'keyword'); ?></td>
-        <td>
-            <?php echo CHtml::activeTextArea($model,'keyword',array('value'=>$model->keyword,'class'=>'textArea'));?>
-            <?php echo $form->error($model,'keyword'); ?>
-        </td>
-    </tr>
+<!--    <tr>-->
+<!--        <td class="leftTd" width="100">--><?php //echo $form->labelEx($model,'hit'); ?><!--</td>-->
+<!--        <td>-->
+<!--            --><?php //echo $form->textField($model,'hit',array('value'=>$model->hit,'class'=>'commonText'));?>
+<!--            --><?php //echo $form->error($model,'hit'); ?>
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td class="leftTd">--><?php //echo $form->labelEx($model,'description'); ?><!--</td>-->
+<!--        <td>-->
+<!--            --><?php //echo CHtml::activeTextArea($model,'description',array('value'=>$model->description,'class'=>'textArea'));?>
+<!--            --><?php //echo $form->error($model,'description'); ?>
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td class="leftTd">--><?php //echo $form->labelEx($model,'keyword'); ?><!--</td>-->
+<!--        <td>-->
+<!--            --><?php //echo CHtml::activeTextArea($model,'keyword',array('value'=>$model->keyword,'class'=>'textArea'));?>
+<!--            --><?php //echo $form->error($model,'keyword'); ?>
+<!--        </td>-->
+<!--    </tr>-->
     <tr>
         <td class="pageTd" colspan="2"><?php echo CHtml::submitButton($model->isNewRecord ? '添加':'保存',array('class'=>'button'));?></td>
     </tr>

@@ -25,11 +25,16 @@ return array(
 	// autoloading model and component classes
 	//模块
 	'modules'=>array(
-	    'gii'=>array(
-	        'class'=>'system.gii.GiiModule',
-	        'password'=>'teddy',
-	        'ipFilters'=>array('127.0.0.1'),
-	    ),
+    'gii'=>array(
+        'class'=>'system.gii.GiiModule',
+        'password'=>'123',
+        // If removed, Gii defaults to localhost only. Edit carefully to taste.
+        'ipFilters'=>array('127.0.0.1','::1','172.16.111.87'),
+        //YiIBooster扩展
+//        'generatorPaths' => array(
+//            'bootstrap.gii'
+//        ),
+    ),
 	    'admin'=>array(),
 	),
 
@@ -57,13 +62,13 @@ return array(
 			'assignmentTable'=>'v_auth_assignment',
 			'itemChildTable'=>'v_auth_item_children',
         ),  
-		'user'=>array(
-			'class'=>'WebUser',
-			'stateKeyPrefix'=>'member',
-			'loginUrl'=>'/login/',
-			'allowAutoLogin'=>true,
-			'autoRenewCookie'=>true,
-		),
+//		'user'=>array(
+//			'class'=>'WebUser',
+//			'stateKeyPrefix'=>'member',
+//			'loginUrl'=>'/login/',
+//			'allowAutoLogin'=>true,
+//			'autoRenewCookie'=>true,
+//		),
 		'request'=>array(
 			'enableCsrfValidation'=>true,
 			//'enableCookieValidation' => true,

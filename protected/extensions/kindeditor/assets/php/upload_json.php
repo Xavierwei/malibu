@@ -147,7 +147,8 @@ if (empty($_FILES) === false) {
             $originalHeight = ImageSY($Original);
             $originalWidth = ImageSX($Original);
 
-            $radio=$originalWidth>=$originalHeight?$originalWidth/$_GET['thumbWidth'] : $originalHeight/$_GET['thumbHeight'];
+            //$radio=$originalWidth>=$originalHeight?$originalWidth/$_GET['thumbWidth'] : $originalHeight/$_GET['thumbHeight'];
+            $radio=min($originalWidth/$_GET['thumbWidth'],$originalHeight/$_GET['thumbHeight']) ;
             $thumbWidth=(int)$originalWidth/$radio;
             $thumbHeight=(int)$originalHeight/$radio;
             //$this->quality = $this->ext == 'png' ? intval($this->quality / 10.01) : $this->quality; //png质量必须为 0-9
