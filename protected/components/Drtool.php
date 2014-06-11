@@ -84,48 +84,13 @@ class Drtool
         }
     }
 
-    /**
-     * 发送邮件
-     */
-    public static function sendEmail($senderName,$title,$content,$sendMaliAddress)
-    {
-//         if (!Yii::app()->user->checkAccess("isAdmin")) //非管理员，未授权
-//        {
-//            StatusSend::_sendResponse(200, StatusSend::error('end', 1015)); //没有权限进行此操作
-//        }
-//        else //管理员
-//        {
-                $mail = Yii::createComponent('application.extensions.mailer.EMailer');
-                $mail->IsSMTP();
-                $mail->SMTPAuth         = false;                               // enable SMTP authentication
-                //$mail->SMTPSecure       = "ssl";                                // sets the prefix to the servier
-				$mail->Host                   = "10.200.98.1";               // sets GMAIL as the SMTP server
-                $mail->Port                    = 25;                                     // set the SMTP port
-                //$mail->Username           = Yii::app()->params['email']['username'];  // GMAIL username
-                //$mail->Password           = Yii::app()->params['email']['password'];                         // GMAIL password
-                $mail->From              = 'noreply@goodluckcarambar.com';                  //you email
-                $mail->FromName     = 'Carambar';         //邮件发送人 your name
-                $mail->IsHTML(true);                                  // set email format to HTML
-                if(is_array($sendMaliAddress))
-                {
-                    foreach($sendMaliAddress as $k => $val)
-                    {
-                        $mail->AddAddress($val);           //收件人email recipient email
-                    }
-                }
-                else
-                {
-                    $mail->AddAddress($sendMaliAddress);
-                }
-                $mail->Subject          =$title;                      //标题 title
-                $mail->Body             = $content;                     //内容 content
-                $mail->WordWrap     = 50;                                            // set word wrap
 
-                if(!$mail->Send())
-                    return false;//StatusSend::_sendResponse(200, StatusSend::error('end', 1024,$mail->ErrorInfo)); //邮件发送失败
-                else
-					return true;//StatusSend::_sendResponse(200, StatusSend::success('success',2008)); //邮件发送成功
-//        }
+    public static function getYouKuId($url)
+    {
+        if (preg_match("/^[\x7f-\xff]+$/", $this[$attribute]))    //兼容gb2312,utf-8
+        {
+            return true;
+        }
     }
 
 }

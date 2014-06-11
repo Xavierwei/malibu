@@ -22,6 +22,7 @@
         </div>
         <div class="cs-clear video">
             <?=$model->source_url;?>
+            <iframe height=<?=Yii::app()->params['videoHeight']?> width=<?=Yii::app()->params['videoWidth']?> src="http://player.youku.com/embed/<?=?>" frameborder=0 allowfullscreen></iframe>
         </div>
     </div>
 </div>
