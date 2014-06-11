@@ -77,24 +77,24 @@
             ?>
         </td>
     </tr>
-<!--    <tr>-->
-<!--        <td class="leftTd" width="100">--><?php //echo $form->labelEx($model,'content'); ?><!--</td>-->
-<!--        <td>-->
-<!--            --><?php //echo CHtml::activeTextArea($model,'content',array('value'=>$model->content));?>
-<!--            --><?php //echo $form->error($model,'content'); ?>
-<!--            --><?php
-//            $this->widget('ext.kindeditor.KindEditorWidget',array(
-//                'id'=>'News_content',
-//                'items' => array(
-//                    'uploadJson'=>Yii::app()->assetManager->publish(Yii::getPathOfAlias('ext.kindeditor.assets')).'/php/upload_json.php?root='.yii::app()->baseUrl.'&catalogue=news_content',
-//                    'width'=>'670px',
-//                    'height'=>'200px',
-//                    'allowFileManager'=>false,
-//                ),
-//            ));
-//            ?>
-<!--        </td>-->
-<!--    </tr>-->
+    <tr>
+        <td class="leftTd" width="100"><?php echo $form->labelEx($model,'content'); ?></td>
+        <td>
+            <?php echo CHtml::activeTextArea($model,'content',array('value'=>$model->content));?>
+            <?php echo $form->error($model,'content'); ?>
+            <?php
+            $this->widget('ext.kindeditor.KindEditorWidget',array(
+                'id'=>'News_content',
+                'items' => array(
+                    'uploadJson'=>Yii::app()->assetManager->publish(Yii::getPathOfAlias('ext.kindeditor.assets')).'/php/upload_json.php?root='.yii::app()->baseUrl.'&catalogue=news_content',
+                    'width'=>'670px',
+                    'height'=>'200px',
+                    'allowFileManager'=>false,
+                ),
+            ));
+            ?>
+        </td>
+    </tr>
 <!--    <tr>-->
 <!--        <td class="leftTd" width="100">--><?php //echo $form->labelEx($model,'source'); ?><!--</td>-->
 <!--        <td>-->
@@ -102,13 +102,13 @@
 <!--            --><?php //echo $form->error($model,'source'); ?>
 <!--        </td>-->
 <!--    </tr>-->
-<!--    <tr>-->
-<!--        <td class="leftTd">--><?php //echo $form->labelEx($model,'source_url'); ?><!--</td>-->
-<!--        <td>-->
-<!--            --><?php //echo CHtml::activeTextArea($model,'source_url',array('value'=>$model->source_url,'class'=>'textArea'));?>
-<!--            --><?php //echo $form->error($model,'source_url'); ?>
-<!--        </td>-->
-<!--    </tr>-->
+    <tr>
+        <td class="leftTd"><?php echo $form->labelEx($model,'source_url'); ?></td>
+        <td>
+            <?php echo CHtml::activeTextArea($model,'source_url',array('value'=>$model->source_url,'class'=>'textArea'));?>
+            <?php echo $form->error($model,'source_url'); ?>
+        </td>
+    </tr>
     <tr>
         <td class="leftTd" width="100"><?php echo $form->labelEx($model,'audit'); ?></td>
         <td>

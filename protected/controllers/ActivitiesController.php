@@ -40,9 +40,33 @@ class ActivitiesController extends Controller
         $this->render('contest',array('model'=>$model));
     }
 
-    public function actionSetStar()
+    public function actionSetStar($id)
     {
+        if(Drtool::getMyCookie('setStar_'.(int)$id))
+        {
+           echo '<script>alert("该视频您已经参与过投票");history.back();</script>';
+        }
+        else
+        {
+            if((int)$id)
+            $update=Activities::model()->updateByPk(
+                (int)$id,
+               array(
+                   'hit'=>new CDbExpression('hit+1'),
+               )
+            );
+            if($update)
+            {
+                Drtool::setMyCookie('setStar_'.(int)$id,0.5);
+                echo '<script>alert("投票成功");history.back();</script>';
+            }
+        }
+    }
 
+    public function actionVideo($url)
+    {
+        $this->layout=false;
+        $this->render('video',array('url'=>$url));
     }
 
 }

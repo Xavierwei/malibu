@@ -41,6 +41,7 @@
 foreach (array("jquery-1.8.3.min.js",
                         "jquery.easing.1.3.js",
                          "jquery.jcarousel.min.js",
+                        "layer-v1.8.3/layer.min.js",
                         "main.js",
                         'media.js',) as $key => $file) {
 	Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/fontend/js/$file");
@@ -52,6 +53,23 @@ foreach (array("jquery-1.8.3.min.js",
             wrap: 'circular'
         });
     });
+
+    function viewVideo(url)
+    {
+        $.layer({
+            type: 2,
+            title: false,
+            //fix: true, //滚动条
+            shadeClose: true,
+            //closeBtn: false,
+            area : ['800px' , '450px'],
+            offset: [($(window).height() - 450)/2 + 'px', ''],
+            //offset : ['100px',''],
+            //border: [0],
+            shade : [0.4, '#000'],
+            iframe: {src: url}
+        });
+    }
 </script>
 </body>
 </html>
