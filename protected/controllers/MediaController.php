@@ -38,17 +38,14 @@ class MediaController extends Controller
                 'params'=>array(':component'=>'wall'),
             )
         );
-        if($wallMenu)
-        {
-            $wallModel=News::model()->findAll(
-                array(
-                    'order'=>'update_time DESC',
-                    'limit'=>'6',
-                    'condition'=>'menu_id = :menu_id AND audit = 1',        //audit 1表示已经审核
-                    'params'=>array(':menu_id'=>$wallMenu->id),
-                )
-            );
-        }
+        $wallModel=News::model()->findAll(
+            array(
+                'order'=>'update_time DESC',
+                'limit'=>'6',
+                'condition'=>'menu_id = :menu_id AND audit = 1',        //audit 1表示已经审核
+                'params'=>array(':menu_id'=>12),
+            )
+        );
 
         //news 为新闻
         $criteria = new CDbCriteria();
