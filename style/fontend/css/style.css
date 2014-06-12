@@ -26,6 +26,8 @@ a:hover{color:#018b85}
 .fr{float: right;}
 .column{width:1000px;margin:0 auto;position: relative;}
 
+p {margin:0 0 15px 0;}
+
 /* bg Used
 ================================================================================================= */
 body{height: 100%;width: 100%}
@@ -94,7 +96,7 @@ body{height: 100%;width: 100%}
 .sec_prolist{margin: 20px auto;position: relative;width: 330px;}
 	.scrollpic{}
 	.sec_prolist_item{float:left;text-align: center;margin: 0;display:inline;width:110px;overflow: hidden;}
-		.sec_prolist_item p{color:#e64415;}
+		.sec_prolist_item p{color:#e64415;margin:0;}
 		.sec_prolist_item a{color:#00aba4;}
 	.scrollbtn{width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
 	.prev{background: url('../img/prev.png') no-repeat;left:-30px}

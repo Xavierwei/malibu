@@ -186,9 +186,56 @@ $(function(){
 
 
     // panel event
-
     if( !LP.getCookie('_age_checked_') ){
         //showAgeCheckPanel();
     }
 
+
+    $('.nav1').click(function(){
+        ga('send', 'event', 'nav', 'brand', 'brand');
+    });
+
+    $('.nav2').click(function(){
+        ga('send', 'event', 'nav', 'products', 'products');
+    });
+
+    $('.nav3').click(function(){
+        ga('send', 'event', 'nav', 'media', 'media');
+    });
+
+    $('.tmalllink').click(function(){
+        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
+    });
+
+    $('.pt_pro1 a').click(function(){
+        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
+    });
+
+    $('.pt_pro2 a').click(function(){
+        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
+    });
+
+    $('.sec_prolist li').eq(0).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink2', 'original_drink2');
+    });
+
+    $('.sec_prolist li').eq(1).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink1', 'original_drink1');
+    });
+
+    $('.sec_prolist li').eq(2).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink3', 'original_drink3');
+    });
+
+    $('.sec_prolist li').eq(3).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink4', 'original_drink4');
+    });
+
+    $('.sec_prolist li').eq(4).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink5', 'original_drink5');
+    });
+
+    $('.sec_prolist li').eq(5).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink6', 'original_drink6');
+    });
 });

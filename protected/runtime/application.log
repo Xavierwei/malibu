@@ -2765,3 +2765,48 @@ Stack trace:
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
 HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
 ---
+2014/06/11 13:57:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+---
+2014/06/11 13:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+---
+2014/06/11 14:04:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+---
+2014/06/11 14:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+---
+2014/06/11 14:06:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+---

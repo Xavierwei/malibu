@@ -9,6 +9,8 @@
     <!--    --><?php //Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/admin/script/jquery.min.js");?>
     <!--    --><?php //Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/admin/script/admin.js");?>
     <?php Yii::app()->getClientScript()->registerCssFile(yii::app()->baseUrl."/style/fontend/css/style.css");?>
+
+    <script src="http://js.t.sinajs.cn/t4/enterprise/js/public/appframe/client.js?version="></script>
 </head>
 <body>
 <div class="page">
