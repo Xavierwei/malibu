@@ -44,7 +44,11 @@ class ActivitiesController extends Controller
     {
         if(Drtool::getMyCookie('setStar_'.(int)$id))
         {
-           echo '<script>alert("该视频您已经参与过投票");history.back();</script>';
+            $data=array(
+              'error'=>1,
+              'message'=>'该视频您已经参与过投票',
+            );
+           echo CJSON::encode($data);
         }
         else
         {
@@ -58,7 +62,11 @@ class ActivitiesController extends Controller
             if($update)
             {
                 Drtool::setMyCookie('setStar_'.(int)$id,0.5);
-                echo '<script>alert("投票成功");history.back();</script>';
+                $data=array(
+                    'success'=>1,
+                    'message'=>'投票成功',
+                );
+                echo CJSON::encode($data);
             }
         }
     }

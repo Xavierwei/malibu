@@ -37,7 +37,7 @@ class ActivitiesController extends Controller
         $pager = new CPagination($count);
         $pager->pageSize = 20;
         $pager->applyLimit($criteria);
-        $criteria->order='create_time DESC';
+        $criteria->order='update_time DESC';
         $data = Activities::model()->findAll($criteria);
         $this->render('list',array('data'=>$data,'page'=>$pager,'model'=>Activities::model()));
 	}

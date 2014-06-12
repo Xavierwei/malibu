@@ -37,7 +37,7 @@
         <tr>
             <td class="leftTd" width="100"><?php echo $form->labelEx($model,'video_url'); ?></td>
             <td colspan="5">
-                <?php echo $form->textField($model,'video_url',array('value'=>$model->title,'class'=>'commonText'));?>
+                <?php echo $form->textField($model,'video_url',array('value'=>$model->video_url,'class'=>'commonText'));?>
                 <?php echo $form->error($model,'video_url'); ?>
             </td>
         </tr>

@@ -6,19 +6,19 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
-	// protected 目录的基础路径  
+	// protected 目录的基础路径
 	// 使用 Yii::app()->basePath 来访问
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 
-	// 应用的名字  
+	// 应用的名字
 	// 使用 Yii::app()->name 来访问
 	'name'=>'Yii Study',
-	// 维护程序时，这样子所有的请求转发到一个地方  
+	// 维护程序时，这样子所有的请求转发到一个地方
 	// 'catchAllRequest' => array('site/all'),
 
-	// 如何在应用程序处理请求之前执行一段操作？当然这个function方法要存在index.php  
+	// 如何在应用程序处理请求之前执行一段操作？当然这个function方法要存在index.php
 	// 'onBeginRequest' => 'function',
-  
+
 	// 预载入的应用组件
 	'preload'=>array('log'),
 
@@ -44,24 +44,24 @@ return array(
 		'application.components.*'
 	),
 
-	// 默认的 controller  
+	// 默认的 controller
 	'defaultController'=>'index',
 
 	// 默认语言
 	'language'=>'zh_cn',
-	// 使用的字符集  
+	// 使用的字符集
 	'charset' => 'utf-8',
 
 
 	// 应用组件的配置
 	'components'=>array(
 		'authManager' => array(
-            'class' => 'CDbAuthManager', 
+            'class' => 'CDbAuthManager',
             'connectionID' => 'db',
             'itemTable'=>'v_auth_item',
 			'assignmentTable'=>'v_auth_assignment',
 			'itemChildTable'=>'v_auth_item_children',
-        ),  
+        ),
 //		'user'=>array(
 //			'class'=>'WebUser',
 //			'stateKeyPrefix'=>'member',
@@ -74,10 +74,10 @@ return array(
 			//'enableCookieValidation' => true,
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=malibu',
+			'connectionString' => 'mysql:host=localhost;dbname=c2malibu',
 			'emulatePrepare' => true,
             'schemaCachingDuration'=>3600,  // 开启表结构缓存（schema caching）提高性能
-            //'schemaCacheID'=>'MemCache',    //设置缓存名称
+            'schemaCacheID'=>'MemCache',    //设置缓存名称
             'enableProfiling' => true,                  //这个是用来记录日志的，会记录每一条语句执行的时间
             'enableParamLogging' => true,       //true表示包括sql语句的参数在内的信息都会记录到日志里，非常详细
 			'username' => 'root',
