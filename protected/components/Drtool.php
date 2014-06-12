@@ -87,9 +87,14 @@ class Drtool
 
     public static function getYouKuId($url)
     {
-        if (preg_match("/^[\x7f-\xff]+$/", $this[$attribute]))    //兼容gb2312,utf-8
+        preg_match("/[A-Za-z0-9]{13}/", $url,$temp);
+        if ($temp)
         {
-            return true;
+            return $temp[0];
+        }
+        else
+        {
+            return false;
         }
     }
 

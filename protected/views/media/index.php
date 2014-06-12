@@ -1,6 +1,5 @@
 <div class="pbd">
     <div class="section sec_media cs-clear">
-
         <?php if($newsModel):?>
             <div class="media_main">
                 <div class="media_maintit"></div>

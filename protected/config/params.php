@@ -3,7 +3,7 @@
 // this contains the application parameters that can be maintained via GUI
 return array(
     'videoWidth'=>520,      //视频宽度
-    'videoHeigth'=>400,      //视频高
+    'videoHeight'=>400,      //视频高
 	// this is displayed in the header section
 	//'title'=>'My Yii Blog',
 	// this is used in error pages

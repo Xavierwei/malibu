@@ -2089,724 +2089,1734 @@ Stack trace:
 REQUEST_URI=/upload/image/news/201404/20140423022134_19893.jpg
 HTTP_REFERER=http://127.0.0.1/admin/news/index/id/12.html
 ---
-2014/06/09 10:56:18 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in /Applications/MAMP/htdocs/malibu/framework/caching/CMemCache.php:116
+2014/05/17 01:02:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "centos-job"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/caching/CMemCache.php(89): CMemCache->getMemCache()
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CModule.php(387): CMemCache->init()
-#2 /Applications/MAMP/htdocs/malibu/framework/db/schema/CDbSchema.php(90): CModule->getComponent('MemCache')
-#3 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(2361): CDbSchema->getTable('{{menu}}')
-#4 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Menu))
-#5 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
-#6 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
-#7 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
-#8 /Applications/MAMP/htdocs/malibu/protected/controllers/IndexController.php(40): CActiveRecord->find(Array)
-#9 /Applications/MAMP/htdocs/malibu/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
-#10 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#12 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#13 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
-#14 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#15 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#16 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#17 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#18 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): CController->run('')
-#19 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('')
-#20 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#21 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#22 {main}
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('centos-job')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/centos-job
+---
+2014/05/25 16:09:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/
+---
+2014/05/25 16:09:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/25 16:09:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/25 16:09:58 [error] [php] Undefined index: News (E:\dev_code\php\malibu\protected\modules\admin\controllers\NewsController.php:38)
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): NewsController->runAction()
+#4 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 E:\dev_code\php\malibu\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): NewsController->filterAccessControl()
+#7 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(265): NewsController->runActionWithFilters()
+#10 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): NewsController->run()
+#11 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\dev_code\php\malibu\index.php(11): CWebApplication->run()
+REQUEST_URI=/admin/news/index/id/10.html
+2014/05/25 16:11:09 [error] [php] Undefined index: News (E:\dev_code\php\malibu\protected\modules\admin\controllers\NewsController.php:40)
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): NewsController->runAction()
+#4 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 E:\dev_code\php\malibu\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): NewsController->filterAccessControl()
+#7 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(265): NewsController->runActionWithFilters()
+#10 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): NewsController->run()
+#11 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\dev_code\php\malibu\index.php(11): CWebApplication->run()
+REQUEST_URI=/admin/news/index/id/10.html
+2014/05/25 16:12:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/25 16:12:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/25 16:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "malibu/upload/image/product/201404/20140426214613_55205.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('malibu/upload/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/upload/image/product/201404/20140426214613_55205.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/25 16:12:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product/list.html
+---
+2014/05/25 16:12:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product/list.html
+---
+2014/05/25 16:16:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/news/201404/20140423022134_19893.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/ne...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/news/201404/20140423022134_19893.jpg
+HTTP_REFERER=http://127.0.0.1/admin/news/index/id/12.html
+---
+2014/05/25 16:18:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/news/201404/20140423022134_19893.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/ne...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/news/201404/20140423022134_19893.jpg
+HTTP_REFERER=http://127.0.0.1/admin/news/index/id/12.html
+---
+2014/05/25 18:26:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/25 18:26:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/25 18:28:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/news/201404/20140423022134_19893.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/ne...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/news/201404/20140423022134_19893.jpg
+HTTP_REFERER=http://127.0.0.1/admin/news/list.html
+---
+2014/05/25 18:28:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/news/201404/20140423022134_19893.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/ne...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/news/201404/20140423022134_19893.jpg
+HTTP_REFERER=http://127.0.0.1/admin/news/list.html
+---
+2014/05/25 18:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/news/201404/20140423022134_19893.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/ne...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/news/201404/20140423022134_19893.jpg
+HTTP_REFERER=http://127.0.0.1/admin/news/index/id/12.html
+---
+2014/05/25 18:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/
+---
+2014/05/26 01:04:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "contest/list"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('contest/list')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/contest/list
+---
+2014/05/26 01:04:21 [error] [exception.CException] exception 'CException' with message '属性 "Product.photo_url" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('photo_url')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\list.php(31): CActiveRecord->__get('photo_url')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(41): CController->render('list', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionList()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('list')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/l...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/list
+---
+2014/05/26 09:12:43 [error] [exception.CException] exception 'CException' with message '属性 "Contest.audit" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('audit')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\list.php(36): CActiveRecord->__get('audit')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(41): CController->render('list', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionList()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('list')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/l...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/list
+---
+2014/05/26 09:16:42 [error] [exception.CException] exception 'CException' with message '属性 "Contest.audit" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('audit')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\list.php(36): CActiveRecord->__get('audit')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(41): CController->render('list', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionList()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('list')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/l...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/list
+---
+2014/05/26 09:17:45 [error] [exception.CException] exception 'CException' with message '属性 "Contest.audit" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('audit')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\list.php(36): CActiveRecord->__get('audit')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(41): CController->render('list', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionList()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('list')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/l...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/list
+---
+2014/05/26 09:20:12 [error] [exception.CException] exception 'CException' with message '属性 "Contest.audit" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('audit')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\list.php(36): CActiveRecord->__get('audit')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(41): CController->render('list', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionList()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('list')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/l...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/list
+---
+2014/05/26 09:21:36 [error] [php] Undefined variable: audit (E:\dev_code\php\malibu\protected\modules\admin\views\contest\list.php:37)
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#1 E:\dev_code\php\malibu\framework\web\CController.php(869): ContestController->renderFile()
+#2 E:\dev_code\php\malibu\framework\web\CController.php(782): ContestController->renderPartial()
+#3 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(41): ContestController->render()
+#4 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionList()
+#5 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): ContestController->runAction()
+#7 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 E:\dev_code\php\malibu\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): ContestController->filterAccessControl()
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(265): ContestController->runActionWithFilters()
+#13 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): ContestController->run()
+#14 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 E:\dev_code\php\malibu\index.php(11): CWebApplication->run()
+REQUEST_URI=/admin/contest/list
+2014/05/26 09:22:44 [error] [exception.CException] exception 'CException' with message '属性 "Contest.audit" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('audit')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\list.php(36): CActiveRecord->__get('audit')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(41): CController->render('list', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionList()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('list')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/l...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/list
+---
+2014/05/26 09:33:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/26 09:33:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/26 09:33:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/26 09:33:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/26 09:33:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/26 09:33:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product.html
+---
+2014/05/26 09:36:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product/list.html
+---
+2014/05/26 09:36:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product/list.html
+---
+2014/05/26 09:36:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product/list.html
+---
+2014/05/26 09:36:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/admin/product/list.html
+---
+2014/05/26 09:39:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LoadModel无法加载模型' in E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php:204
+Stack trace:
+#0 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(100): ContestController->loadModel()
+#1 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionAudit()
+#2 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('audit')
+#11 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/a...')
+#12 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#14 {main}
+REQUEST_URI=/admin/contest/audit/id/1.html
+HTTP_REFERER=http://127.0.0.1/admin/contest/list
+---
+2014/05/26 09:45:48 [error] [exception.CException] exception 'CException' with message '属性 "Contest.category_id" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('category_id')
+#1 E:\dev_code\php\malibu\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('category_id')
+#2 E:\dev_code\php\malibu\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Contest), 'category_id')
+#3 E:\dev_code\php\malibu\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Contest), 'category_id', Array, Array)
+#4 E:\dev_code\php\malibu\protected\modules\admin\views\contest\edit.php(33): CActiveForm->dropDownList(Object(Contest), 'category_id', Array, Array)
+#5 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#6 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#7 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#8 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#9 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('edit', Array, true)
+#10 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(74): CController->render('edit', Array)
+#11 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionEdit()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#19 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('edit')
+#21 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/e...')
+#22 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/admin/contest/edit/id/1.html
+HTTP_REFERER=http://127.0.0.1/admin/contest/list.html
+---
+2014/05/26 09:46:23 [error] [exception.CException] exception 'CException' with message '属性 "Contest.description" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('description')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\edit.php(40): CActiveRecord->__get('description')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('edit', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(74): CController->render('edit', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionEdit()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('edit')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/e...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/edit/id/1.html
+HTTP_REFERER=http://127.0.0.1/admin/contest/list.html
+---
+2014/05/26 09:47:15 [error] [exception.CException] exception 'CException' with message '属性 "Contest.content" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('content')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\edit.php(84): CActiveRecord->__get('content')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('edit', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(74): CController->render('edit', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionEdit()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('edit')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/e...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/edit/id/1.html
+HTTP_REFERER=http://127.0.0.1/admin/contest/list.html
+---
+2014/05/26 09:47:41 [error] [exception.CException] exception 'CException' with message '属性 "Contest.keyword" 未被定义.' in E:\dev_code\php\malibu\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(145): CComponent->__get('keyword')
+#1 E:\dev_code\php\malibu\protected\modules\admin\views\contest\edit.php(91): CActiveRecord->__get('keyword')
+#2 E:\dev_code\php\malibu\framework\web\CBaseController.php(126): require('E:\dev_code\php...')
+#3 E:\dev_code\php\malibu\protected\extensions\yii-debug-toolbar\YiiDebugViewRenderer.php(40): CBaseController->renderInternal('E:\dev_code\php...', Array, true)
+#4 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ContestController), 'E:\dev_code\php...', Array, true)
+#5 E:\dev_code\php\malibu\framework\web\CController.php(869): CBaseController->renderFile('E:\dev_code\php...', Array, true)
+#6 E:\dev_code\php\malibu\framework\web\CController.php(782): CController->renderPartial('edit', Array, true)
+#7 E:\dev_code\php\malibu\protected\modules\admin\controllers\ContestController.php(74): CController->render('edit', Array)
+#8 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ContestController->actionEdit()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('edit')
+#18 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/e...')
+#19 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/contest/edit/id/1.html
+HTTP_REFERER=http://127.0.0.1/admin/contest/list.html
+---
+2014/05/26 22:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/26 22:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/26 22:49:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/26 22:49:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 16:45:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 16:45:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 17:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 17:09:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 17:09:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/
+---
+2014/05/27 17:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/media.html
+---
+2014/05/27 17:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/media.html
+---
+2014/05/27 17:09:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/media/index.html?page=2
+---
+2014/05/27 17:09:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/media/index.html?page=2
+---
+2014/05/27 17:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021417_99843.jpg
+HTTP_REFERER=http://127.0.0.1/media.html
+---
+2014/05/27 17:18:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/image/product/201404/20140423021836_95245.jpg
+HTTP_REFERER=http://127.0.0.1/media.html
+---
+2014/05/27 17:24:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "activbities"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activbities')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/activbities
+---
+2014/05/27 17:26:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:39:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "css/style.css"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('css/style.css')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/style.css
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:41:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "img/act_demo.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('img/act_demo.jp...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/act_demo.jpg
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:41:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "img/act_weiboicon.png"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('img/act_weiboic...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/act_weiboicon.png
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:43:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "img/act_demo.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('img/act_demo.jp...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/act_demo.jpg
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:43:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "img/act_weiboicon.png"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('img/act_weiboic...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/act_weiboicon.png
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:43:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:46:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "img/malivand_video.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('img/malivand_vi...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/malivand_video.jpg
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:46:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "img/malivand_video.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('img/malivand_vi...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/malivand_video.jpg
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 17:55:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 17:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 18:18:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updtae_time' in 'order clause'. The SQL statement executed was: SELECT * FROM `v_activities` `t` ORDER BY updtae_time DESC LIMIT 20.
+2014/05/27 18:18:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updtae_time' in 'order clause'. The SQL statement executed was: SELECT * FROM `v_activities` `t` ORDER BY updtae_time DESC LIMIT 20' in E:\dev_code\php\malibu\framework\db\CDbCommand.php:543
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 E:\dev_code\php\malibu\protected\modules\admin\controllers\ActivitiesController.php(41): CActiveRecord->findAll(Object(CDbCriteria))
+#4 E:\dev_code\php\malibu\protected\modules\admin\controllers\ActivitiesController.php(30): ActivitiesController->actionList()
+#5 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ActivitiesController->actionIndex()
+#6 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('index')
+#15 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/activitie...')
+#16 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/activities/index.html
+HTTP_REFERER=http://127.0.0.1/admin/home/header.html
+---
+2014/05/27 20:20:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/activities
+---
+2014/05/27 21:19:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "contest"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('contest')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/contest
+---
+2014/05/27 21:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "contest" 动作.' in E:\dev_code\php\malibu\framework\web\CController.php:483
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(270): CController->missingAction('contest')
+#1 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('contest')
+#2 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/cont...')
+#3 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/activities/contest
+---
+2014/05/27 21:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "img" 动作.' in E:\dev_code\php\malibu\framework\web\CController.php:483
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(270): CController->missingAction('img')
+#1 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('img')
+#2 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/img/...')
+#3 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/activities/img/act_demo.jpg
+HTTP_REFERER=http://127.0.0.1/activities/contest
+---
+2014/05/27 21:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/activities/contest
+---
+2014/05/27 21:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "img" 动作.' in E:\dev_code\php\malibu\framework\web\CController.php:483
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(270): CController->missingAction('img')
+#1 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('img')
+#2 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/img/...')
+#3 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/activities/img/act_weiboicon.png
+HTTP_REFERER=http://127.0.0.1/activities/contest
+---
+2014/05/27 23:10:55 [error] [php] Undefined variable: key (E:\dev_code\php\malibu\protected\views\activities\contest.php:12)
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#1 E:\dev_code\php\malibu\framework\web\CController.php(869): ActivitiesController->renderFile()
+#2 E:\dev_code\php\malibu\framework\web\CController.php(782): ActivitiesController->renderPartial()
+#3 E:\dev_code\php\malibu\protected\controllers\ActivitiesController.php(40): ActivitiesController->render()
+#4 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ActivitiesController->actionContest()
+#5 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): ActivitiesController->runAction()
+#7 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 E:\dev_code\php\malibu\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): ActivitiesController->filterAccessControl()
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(265): ActivitiesController->runActionWithFilters()
+#13 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): ActivitiesController->run()
+#14 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 E:\dev_code\php\malibu\index.php(11): CWebApplication->run()
+REQUEST_URI=/activities/contest
+2014/05/27 23:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 23:10:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 23:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/activities/contest
+---
+2014/05/27 23:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "admin/contest/list"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contest/l...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/contest/list
+---
+2014/05/27 23:23:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updtae_time' in 'order clause'. The SQL statement executed was: SELECT * FROM `v_activities` `t` ORDER BY updtae_time DESC LIMIT 20.
+2014/05/27 23:23:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updtae_time' in 'order clause'. The SQL statement executed was: SELECT * FROM `v_activities` `t` ORDER BY updtae_time DESC LIMIT 20' in E:\dev_code\php\malibu\framework\db\CDbCommand.php:543
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 E:\dev_code\php\malibu\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 E:\dev_code\php\malibu\protected\modules\admin\controllers\ActivitiesController.php(41): CActiveRecord->findAll(Object(CDbCriteria))
+#4 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(49): ActivitiesController->actionList()
+#5 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#12 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('list')
+#14 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/activitie...')
+#15 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/admin/activities/list
+---
+2014/06/03 17:38:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://172.16.111.87/malibu/
+---
+2014/06/09 20:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://172.16.111.87/malibu/
+---
+2014/06/09 20:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "malibu/admin/news/index/id/10"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('malibu/admin/ne...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/admin/news/index/id/10.html
+HTTP_REFERER=http://172.16.111.87/malibu/admin
+---
+2014/06/09 20:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "malibu/style/admin/images/headLogo.png"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('malibu/style/ad...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/admin/images/headLogo.png
+HTTP_REFERER=http://172.16.111.87/malibu/admin/home/header.html
+---
+2014/06/09 20:26:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://172.16.111.87/Activities
+---
+2014/06/10 17:18:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "malibu"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('malibu')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu
+---
+2014/06/10 17:18:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/06/10 17:18:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/06/10 17:18:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "malibu/admin"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('malibu/admin')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/admin
+---
+2014/06/10 17:19:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/Activities
+---
+2014/06/10 17:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/activities/contest
+---
+2014/06/10 17:32:41 [error] [php] Invalid argument supplied for foreach() (E:\dev_code\php\malibu\framework\db\schema\CDbCommandBuilder.php:368)
+Stack trace:
+#0 unknown(0): ActivitiesController->actionSetStar()
+#1 E:\dev_code\php\malibu\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#2 E:\dev_code\php\malibu\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 E:\dev_code\php\malibu\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): ActivitiesController->runAction()
+#5 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 E:\dev_code\php\malibu\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): ActivitiesController->filterAccessControl()
+#8 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#10 E:\dev_code\php\malibu\framework\web\CController.php(265): ActivitiesController->runActionWithFilters()
+#11 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): ActivitiesController->run()
+#12 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\dev_code\php\malibu\index.php(11): CWebApplication->run()
+REQUEST_URI=/activities/setstar/1.html
+2014/06/10 18:02:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
+---
+2014/06/10 22:08:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "video"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('video')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/video
+---
+2014/06/10 22:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "web/js/main.js"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('web/js/main.js')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/web/js/main.js
+HTTP_REFERER=http://172.16.111.87/malibu/web/
+---
+2014/06/10 22:49:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "web/js/main.js"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('web/js/main.js')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/web/js/main.js
+HTTP_REFERER=http://172.16.111.87/malibu/web/
+---
+2014/06/10 22:49:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "video"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('video')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/video
+---
+2014/06/10 23:39:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
+---
+2014/06/10 23:40:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "video" 动作.' in E:\dev_code\php\malibu\framework\web\CController.php:483
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(270): CController->missingAction('video')
+#1 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('video')
+#2 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/vide...')
+#3 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/malibu/activities/video/1.mp4
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
+---
+2014/06/10 23:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "video" 动作.' in E:\dev_code\php\malibu\framework\web\CController.php:483
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(270): CController->missingAction('video')
+#1 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('video')
+#2 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/vide...')
+#3 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/malibu/activities/video/1.mp4
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
+---
+2014/06/10 23:41:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "video" 动作.' in E:\dev_code\php\malibu\framework\web\CController.php:483
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(270): CController->missingAction('video')
+#1 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('video')
+#2 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/vide...')
+#3 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/malibu/activities/video/1.mp4
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
+---
+2014/06/10 23:43:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "video" 动作.' in E:\dev_code\php\malibu\framework\web\CController.php:483
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(270): CController->missingAction('video')
+#1 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('video')
+#2 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/vide...')
+#3 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/malibu/activities/video/1.mp4
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
+---
+2014/06/10 23:56:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message '您的请求无效。' in E:\dev_code\php\malibu\framework\web\CController.php:336
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('video')
+#9 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/vide...')
+#10 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/malibu/activities/video/1.mp4
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
+---
+2014/06/10 23:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "fontend/style/video/player.swf"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('fontend/style/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/fontend/style/video/player.swf
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:00:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试2"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%952
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:01:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试2"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%952
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:02:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试2"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%952
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:04:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试2"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%952
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:04:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试2"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%952
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:05:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试2"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%952
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:06:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试2"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%952
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%952
+---
+2014/06/11 00:06:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/video/测试1"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/v...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/style/fontend/video/%E6%B5%8B%E8%AF%951
+HTTP_REFERER=http://127.0.0.1/malibu/activities/video.html?url=%E6%B5%8B%E8%AF%951
+---
+2014/06/11 02:21:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /alidata/www/tianzifang/malibu/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /alidata/www/tianzifang/malibu/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /alidata/www/tianzifang/malibu/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /alidata/www/tianzifang/malibu/framework/base/CModule.php(387): CDbConnection->init()
+#3 /alidata/www/tianzifang/malibu/framework/web/CDbHttpSession.php(175): CModule->getComponent('db')
+#4 /alidata/www/tianzifang/malibu/framework/web/CDbHttpSession.php(199): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->openSession('', 'LUCSID')
+#6 /alidata/www/tianzifang/malibu/framework/web/CHttpSession.php(114): session_start()
+#7 /alidata/www/tianzifang/malibu/framework/web/CHttpSession.php(88): CHttpSession->open()
+#8 /alidata/www/tianzifang/malibu/framework/base/CModule.php(387): CHttpSession->init()
+#9 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(201): CModule->getComponent('session')
+#10 /alidata/www/tianzifang/malibu/framework/web/auth/CWebUser.php(199): CWebApplication->getSession()
+#11 /alidata/www/tianzifang/malibu/framework/base/CModule.php(387): CWebUser->init()
+#12 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(209): CModule->getComponent('user')
+#13 /alidata/www/tianzifang/malibu/framework/web/auth/CAccessControlFilter.php(132): CWebApplication->getUser()
+#14 /alidata/www/tianzifang/malibu/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#15 /alidata/www/tianzifang/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /alidata/www/tianzifang/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /alidata/www/tianzifang/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /alidata/www/tianzifang/malibu/framework/web/CController.php(291): CFilterChain->run()
+#19 /alidata/www/tianzifang/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(282): CController->run('')
+#21 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#22 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
+#24 {main}
 REQUEST_URI=/malibu/
 ---
-2014/06/09 10:56:46 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in /Applications/MAMP/htdocs/malibu/framework/caching/CMemCache.php:116
+2014/06/11 02:23:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/caching/CMemCache.php(89): CMemCache->getMemCache()
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CModule.php(387): CMemCache->init()
-#2 /Applications/MAMP/htdocs/malibu/framework/db/schema/CDbSchema.php(90): CModule->getComponent('MemCache')
-#3 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(2361): CDbSchema->getTable('{{menu}}')
-#4 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Menu))
-#5 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
-#6 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
-#7 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
-#8 /Applications/MAMP/htdocs/malibu/protected/controllers/IndexController.php(40): CActiveRecord->find(Array)
-#9 /Applications/MAMP/htdocs/malibu/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
-#10 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#12 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#13 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
-#14 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#15 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#16 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#17 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#18 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): CController->run('')
-#19 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('')
-#20 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#21 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#22 {main}
-REQUEST_URI=/malibu/
----
-2014/06/09 10:56:48 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in /Applications/MAMP/htdocs/malibu/framework/caching/CMemCache.php:116
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/caching/CMemCache.php(89): CMemCache->getMemCache()
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CModule.php(387): CMemCache->init()
-#2 /Applications/MAMP/htdocs/malibu/framework/db/schema/CDbSchema.php(90): CModule->getComponent('MemCache')
-#3 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(2361): CDbSchema->getTable('{{menu}}')
-#4 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Menu))
-#5 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
-#6 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
-#7 /Applications/MAMP/htdocs/malibu/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
-#8 /Applications/MAMP/htdocs/malibu/protected/controllers/IndexController.php(40): CActiveRecord->find(Array)
-#9 /Applications/MAMP/htdocs/malibu/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
-#10 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#12 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#13 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
-#14 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#15 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#16 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#17 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#18 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): CController->run('')
-#19 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('')
-#20 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#21 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#22 {main}
-REQUEST_URI=/malibu/
----
-2014/06/09 10:57:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/
 ---
-2014/06/09 10:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 02:25:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/09 10:58:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 02:25:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/09 10:58:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 02:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/
 ---
-2014/06/09 10:58:57 [error] [php] Undefined variable: wallModel (/Applications/MAMP/htdocs/malibu/protected/controllers/MediaController.php:65)
+2014/06/11 09:25:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): MediaController->runAction()
-#1 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#2 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CAccessControlFilter->filter()
-#3 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): MediaController->filterAccessControl()
-#4 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
-#5 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#6 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): MediaController->runActionWithFilters()
-#7 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): MediaController->run()
-#8 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#9 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#10 /Applications/MAMP/htdocs/malibu/index.php(11): CWebApplication->run()
-REQUEST_URI=/malibu/media.html
-2014/06/09 10:59:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/09 10:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 09:26:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'photo2' doesn't have a default value. The SQL statement executed was: INSERT INTO `v_product` (`audit`, `hot`, `recommend`, `hit`, `star`, `comment_number`, `create_time`, `update_time`, `title`, `category_id`, `description`, `photo1`, `content`, `keyword`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13). Bound with :yp0=1, :yp1=0, :yp2=0, :yp3=0, :yp4=0, :yp5=0, :yp6=1402449977, :yp7=1402449977, :yp8='这个是测试的', :yp9=9, :yp10='测试', :yp11='/malibu/upload/image/product/201406/20140611092609_11215.jpg', :yp12='测试一下啊', :yp13=NULL.
+2014/06/11 09:26:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[HY000]: General error: 1364 Field 'photo2' doesn't have a default value. The SQL statement executed was: INSERT INTO `v_product` (`audit`, `hot`, `recommend`, `hit`, `star`, `comment_number`, `create_time`, `update_time`, `title`, `category_id`, `description`, `photo1`, `content`, `keyword`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13). Bound with :yp0=1, :yp1=0, :yp2=0, :yp3=0, :yp4=0, :yp5=0, :yp6=1402449977, :yp7=1402449977, :yp8='这个是测试的', :yp9=9, :yp10='测试', :yp11='/malibu/upload/image/product/201406/20140611092609_11215.jpg', :yp12='测试一下啊', :yp13=NULL' in /alidata/www/tianzifang/malibu/framework/db/CDbCommand.php:358
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /alidata/www/tianzifang/malibu/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /alidata/www/tianzifang/malibu/protected/modules/admin/controllers/ProductController.php(51): CActiveRecord->save()
+#3 /alidata/www/tianzifang/malibu/framework/web/actions/CInlineAction.php(49): ProductController->actionCreat()
+#4 /alidata/www/tianzifang/malibu/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /alidata/www/tianzifang/malibu/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /alidata/www/tianzifang/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /alidata/www/tianzifang/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /alidata/www/tianzifang/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /alidata/www/tianzifang/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /alidata/www/tianzifang/malibu/framework/web/CController.php(291): CFilterChain->run()
+#11 /alidata/www/tianzifang/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(282): CController->run('creat')
+#13 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/product/c...')
+#14 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/malibu/admin/product/creat.html
+HTTP_REFERER=http://tianzifang.cn/malibu/admin/product/creat.html
+---
+2014/06/11 09:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/
 ---
-2014/06/10 09:33:37 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Applications/MAMP/htdocs/malibu/assets" 是无效的. 请确定它是一个可被 Web server process 写入资料的目录.' in /Applications/MAMP/htdocs/malibu/framework/web/CAssetManager.php:138
+2014/06/11 10:17:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Applications/M...')
-#1 /Applications/MAMP/htdocs/malibu/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
-#2 /Applications/MAMP/htdocs/malibu/framework/web/CClientScript.php(510): CAssetManager->publish('/Applications/M...')
-#3 /Applications/MAMP/htdocs/malibu/framework/web/CClientScript.php(547): CClientScript->getCoreScriptUrl()
-#4 /Applications/MAMP/htdocs/malibu/framework/web/CClientScript.php(348): CClientScript->getPackageBaseUrl('jquery')
-#5 /Applications/MAMP/htdocs/malibu/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
-#6 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
-#7 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(788): CController->processOutput('<!DOCTYPE html ...')
-#8 /Applications/MAMP/htdocs/malibu/protected/modules/admin/controllers/ManageController.php(53): CController->render('login', Array)
-#9 /Applications/MAMP/htdocs/malibu/framework/web/actions/CInlineAction.php(49): ManageController->actionLogin()
-#10 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#12 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#13 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
-#14 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#15 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#16 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#17 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#18 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): CController->run('login')
-#19 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/manage/lo...')
-#20 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#21 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#22 {main}
-REQUEST_URI=/malibu/admin/manage/login.html
----
-2014/06/10 09:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:35:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:35:39 [error] [php] include(Activities.php): failed to open stream: No such file or directory (/Applications/MAMP/htdocs/malibu/framework/YiiBase.php:427)
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/protected/modules/admin/controllers/ActivitiesController.php(47): spl_autoload_call()
-#1 /Applications/MAMP/htdocs/malibu/framework/web/actions/CInlineAction.php(49): ActivitiesController->actionCreat()
-#2 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(308): CInlineAction->runWithParams()
-#3 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): ActivitiesController->runAction()
-#4 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#5 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CAccessControlFilter->filter()
-#6 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): ActivitiesController->filterAccessControl()
-#7 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
-#8 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#9 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): ActivitiesController->runActionWithFilters()
-#10 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): ActivitiesController->run()
-#11 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#12 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#13 /Applications/MAMP/htdocs/malibu/index.php(11): CWebApplication->run()
-REQUEST_URI=/malibu/admin/activities/creat.html
-2014/06/10 09:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:35:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product/edit/id/3.html
----
-2014/06/10 09:35:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product/edit/id/3.html
----
-2014/06/10 09:35:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product/edit/id/3.html
----
-2014/06/10 09:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021836_95245.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021836_95245.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/image/product/201404/20140423021417_99843.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/image/pr...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/upload/image/product/201404/20140423021417_99843.jpg
-HTTP_REFERER=http://localhost/malibu/admin/product.html
----
-2014/06/10 09:36:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/product/drink/5.html
 ---
-2014/06/10 09:36:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 11:26:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /alidata/www/tianzifang/malibu/framework/db/CDbConnection.php:382
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /alidata/www/tianzifang/malibu/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /alidata/www/tianzifang/malibu/framework/base/CModule.php(387): CDbConnection->init()
+#3 /alidata/www/tianzifang/malibu/framework/web/CDbHttpSession.php(175): CModule->getComponent('db')
+#4 /alidata/www/tianzifang/malibu/framework/web/CDbHttpSession.php(199): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->openSession('', 'LUCSID')
+#6 /alidata/www/tianzifang/malibu/framework/web/CHttpSession.php(114): session_start()
+#7 /alidata/www/tianzifang/malibu/framework/web/CHttpSession.php(88): CHttpSession->open()
+#8 /alidata/www/tianzifang/malibu/framework/base/CModule.php(387): CHttpSession->init()
+#9 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(201): CModule->getComponent('session')
+#10 /alidata/www/tianzifang/malibu/framework/web/auth/CWebUser.php(199): CWebApplication->getSession()
+#11 /alidata/www/tianzifang/malibu/framework/base/CModule.php(387): CWebUser->init()
+#12 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(209): CModule->getComponent('user')
+#13 /alidata/www/tianzifang/malibu/framework/web/auth/CAccessControlFilter.php(132): CWebApplication->getUser()
+#14 /alidata/www/tianzifang/malibu/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#15 /alidata/www/tianzifang/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /alidata/www/tianzifang/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /alidata/www/tianzifang/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /alidata/www/tianzifang/malibu/framework/web/CController.php(291): CFilterChain->run()
+#19 /alidata/www/tianzifang/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(282): CController->run('contest')
+#21 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('activities/cont...')
+#22 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/malibu/activities/contest
+---
+2014/06/11 11:27:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/10 09:36:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 12:17:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 09:36:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 14:18:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "activites/contest"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('activites/conte...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/malibu/activites/contest
+---
+2014/06/11 14:19:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/10 09:36:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 14:19:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 09:36:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 14:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/10 09:45:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 14:48:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/10 09:46:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 16:50:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/
 ---
-2014/06/10 09:46:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 16:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/product/original.html
 ---
-2014/06/10 10:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 17:33:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/index.html
 ---
-2014/06/10 10:06:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 21:33:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:09:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 21:49:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:10:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/11 23:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:10:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 04:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/
 ---
-2014/06/10 10:11:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 04:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/10 10:11:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 04:05:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/10 10:11:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 04:06:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://tianzifang.cn/malibu/activities/contest
 ---
-2014/06/10 10:11:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 04:11:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'update_time' in order clause is ambiguous. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`title` AS `t0_c1`, `t`.`menu_id` AS `t0_c2`, `t`.`content` AS `t0_c3`, `t`.`audit` AS `t0_c4`, `t`.`hot` AS `t0_c5`, `t`.`recommend` AS `t0_c6`, `t`.`photo1` AS `t0_c7`, `t`.`photo2` AS `t0_c8`, `t`.`hit` AS `t0_c9`, `t`.`comment_number` AS `t0_c10`, `t`.`source` AS `t0_c11`, `t`.`source_url` AS `t0_c12`, `t`.`description` AS `t0_c13`, `t`.`keyword` AS `t0_c14`, `t`.`create_time` AS `t0_c15`, `t`.`update_time` AS `t0_c16`, `menu`.`id` AS `t1_c0`, `menu`.`name` AS `t1_c1`, `menu`.`component` AS `t1_c2`, `menu`.`lft` AS `t1_c3`, `menu`.`rgt` AS `t1_c4`, `menu`.`parent` AS `t1_c5`, `menu`.`depth` AS `t1_c6`, `menu`.`photo1` AS `t1_c7`, `menu`.`content` AS `t1_c8`, `menu`.`audit` AS `t1_c9`, `menu`.`title` AS `t1_c10`, `menu`.`description` AS `t1_c11`, `menu`.`keyword` AS `t1_c12`, `menu`.`update_time` AS `t1_c13` FROM `v_news` `t`  LEFT OUTER JOIN `v_menu` `menu` ON (`t`.`menu_id`=`menu`.`id`)  WHERE (menu_id = :menu_id) ORDER BY update_time DESC LIMIT 15. Bound with :menu_id='10'.
+2014/06/12 04:11:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'update_time' in order clause is ambiguous. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`title` AS `t0_c1`, `t`.`menu_id` AS `t0_c2`, `t`.`content` AS `t0_c3`, `t`.`audit` AS `t0_c4`, `t`.`hot` AS `t0_c5`, `t`.`recommend` AS `t0_c6`, `t`.`photo1` AS `t0_c7`, `t`.`photo2` AS `t0_c8`, `t`.`hit` AS `t0_c9`, `t`.`comment_number` AS `t0_c10`, `t`.`source` AS `t0_c11`, `t`.`source_url` AS `t0_c12`, `t`.`description` AS `t0_c13`, `t`.`keyword` AS `t0_c14`, `t`.`create_time` AS `t0_c15`, `t`.`update_time` AS `t0_c16`, `menu`.`id` AS `t1_c0`, `menu`.`name` AS `t1_c1`, `menu`.`component` AS `t1_c2`, `menu`.`lft` AS `t1_c3`, `menu`.`rgt` AS `t1_c4`, `menu`.`parent` AS `t1_c5`, `menu`.`depth` AS `t1_c6`, `menu`.`photo1` AS `t1_c7`, `menu`.`content` AS `t1_c8`, `menu`.`audit` AS `t1_c9`, `menu`.`title` AS `t1_c10`, `menu`.`description` AS `t1_c11`, `menu`.`keyword` AS `t1_c12`, `menu`.`update_time` AS `t1_c13` FROM `v_news` `t`  LEFT OUTER JOIN `v_menu` `menu` ON (`t`.`menu_id`=`menu`.`id`)  WHERE (menu_id = :menu_id) ORDER BY update_time DESC LIMIT 15. Bound with :menu_id='10'' in /alidata/www/tianzifang/malibu/framework/db/CDbCommand.php:543
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /alidata/www/tianzifang/malibu/framework/db/ar/CActiveFinder.php(803): CDbCommand->queryAll()
+#2 /alidata/www/tianzifang/malibu/framework/db/ar/CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /alidata/www/tianzifang/malibu/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 /alidata/www/tianzifang/malibu/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 /alidata/www/tianzifang/malibu/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /alidata/www/tianzifang/malibu/protected/modules/admin/controllers/NewsController.php(63): CActiveRecord->findAll(Object(CDbCriteria))
+#7 /alidata/www/tianzifang/malibu/protected/modules/admin/controllers/NewsController.php(30): NewsController->actionList('10')
+#8 [internal function]: NewsController->actionIndex('10')
+#9 /alidata/www/tianzifang/malibu/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#10 /alidata/www/tianzifang/malibu/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NewsController), Object(ReflectionMethod), Array)
+#11 /alidata/www/tianzifang/malibu/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /alidata/www/tianzifang/malibu/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /alidata/www/tianzifang/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /alidata/www/tianzifang/malibu/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /alidata/www/tianzifang/malibu/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /alidata/www/tianzifang/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /alidata/www/tianzifang/malibu/framework/web/CController.php(291): CFilterChain->run()
+#18 /alidata/www/tianzifang/malibu/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(282): CController->run('index')
+#20 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/news/inde...')
+#21 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
+#23 {main}
+REQUEST_URI=/malibu/admin/news/index/id/10.html
+HTTP_REFERER=http://tianzifang.cn/malibu/admin/home/header.html
+---
+2014/06/12 10:49:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 10:49:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:11:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 10:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:11:20 [error] [php] Undefined variable: wallModel (/Applications/MAMP/htdocs/malibu/protected/controllers/MediaController.php:65)
+2014/06/12 11:14:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): MediaController->runAction()
-#1 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#2 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CAccessControlFilter->filter()
-#3 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): MediaController->filterAccessControl()
-#4 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
-#5 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#6 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): MediaController->runActionWithFilters()
-#7 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): MediaController->run()
-#8 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#9 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#10 /Applications/MAMP/htdocs/malibu/index.php(11): CWebApplication->run()
-REQUEST_URI=/malibu/media.html
-2014/06/10 10:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:11:25 [error] [php] Undefined variable: wallModel (/Applications/MAMP/htdocs/malibu/protected/controllers/MediaController.php:65)
+2014/06/12 11:17:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): MediaController->runAction()
-#1 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#2 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CAccessControlFilter->filter()
-#3 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): MediaController->filterAccessControl()
-#4 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
-#5 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#6 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): MediaController->runActionWithFilters()
-#7 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): MediaController->run()
-#8 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#9 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#10 /Applications/MAMP/htdocs/malibu/index.php(11): CWebApplication->run()
-REQUEST_URI=/malibu/media.html
-2014/06/10 10:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 10:11:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 11:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 11:04:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 11:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 11:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 11:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 12:46:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+2014/06/12 11:25:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 /alidata/www/tianzifang/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 /alidata/www/tianzifang/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /alidata/www/tianzifang/malibu/index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://114.215.173.191/malibu/activities/contest
 ---
-2014/06/10 12:46:31 [error] [php] Trying to get property of non-object (/Applications/MAMP/htdocs/malibu/protected/controllers/MediaController.php:46)
+2014/06/12 13:32:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'rootwse'@'localhost' (using password: YES)' in E:\dev_code\php\malibu\framework\db\CDbConnection.php:382
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(133): MediaController->runAction()
-#1 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilter.php(40): CFilterChain->run()
-#2 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(1145): CAccessControlFilter->filter()
-#3 /Applications/MAMP/htdocs/malibu/framework/web/filters/CInlineFilter.php(58): MediaController->filterAccessControl()
-#4 /Applications/MAMP/htdocs/malibu/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
-#5 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(291): CFilterChain->run()
-#6 /Applications/MAMP/htdocs/malibu/framework/web/CController.php(265): MediaController->runActionWithFilters()
-#7 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(282): MediaController->run()
-#8 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#9 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#10 /Applications/MAMP/htdocs/malibu/index.php(11): CWebApplication->run()
-REQUEST_URI=/malibu/media.html
-2014/06/10 12:47:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
+#0 E:\dev_code\php\malibu\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 E:\dev_code\php\malibu\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 E:\dev_code\php\malibu\framework\base\CModule.php(387): CDbConnection->init()
+#3 E:\dev_code\php\malibu\framework\web\CDbHttpSession.php(175): CModule->getComponent('db')
+#4 E:\dev_code\php\malibu\framework\web\CDbHttpSession.php(199): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->openSession('D:\share_soft\p...', 'LUCSID')
+#6 E:\dev_code\php\malibu\framework\web\CHttpSession.php(114): session_start()
+#7 E:\dev_code\php\malibu\framework\web\CHttpSession.php(88): CHttpSession->open()
+#8 E:\dev_code\php\malibu\framework\base\CModule.php(387): CHttpSession->init()
+#9 E:\dev_code\php\malibu\framework\web\CWebApplication.php(201): CModule->getComponent('session')
+#10 E:\dev_code\php\malibu\framework\web\auth\CWebUser.php(199): CWebApplication->getSession()
+#11 E:\dev_code\php\malibu\framework\base\CModule.php(387): CWebUser->init()
+#12 E:\dev_code\php\malibu\framework\web\CWebApplication.php(209): CModule->getComponent('user')
+#13 E:\dev_code\php\malibu\framework\web\auth\CAccessControlFilter.php(132): CWebApplication->getUser()
+#14 E:\dev_code\php\malibu\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#15 E:\dev_code\php\malibu\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 E:\dev_code\php\malibu\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 E:\dev_code\php\malibu\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 E:\dev_code\php\malibu\framework\web\CController.php(291): CFilterChain->run()
+#19 E:\dev_code\php\malibu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 E:\dev_code\php\malibu\framework\web\CWebApplication.php(282): CController->run('contest')
+#21 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('activities/cont...')
+#22 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 E:\dev_code\php\malibu\index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/malibu/activities/contest
+---
+2014/06/12 13:32:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in E:\dev_code\php\malibu\framework\web\CWebApplication.php:286
 Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
+#0 E:\dev_code\php\malibu\framework\web\CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
+#1 E:\dev_code\php\malibu\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\dev_code\php\malibu\index.php(11): CApplication->run()
 #3 {main}
 REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/10 12:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/10 12:50:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/10 12:51:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/10 13:39:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/10 13:39:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/11 13:57:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/11 13:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/11 14:04:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/11 14:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
----
-2014/06/11 14:06:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "style/fontend/img/hdbg.jpg"。' in /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php:286
-Stack trace:
-#0 /Applications/MAMP/htdocs/malibu/framework/web/CWebApplication.php(141): CWebApplication->runController('style/fontend/i...')
-#1 /Applications/MAMP/htdocs/malibu/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/MAMP/htdocs/malibu/index.php(11): CApplication->run()
-#3 {main}
-REQUEST_URI=/malibu/style/fontend/img/hdbg.jpg
-HTTP_REFERER=http://localhost/malibu/style/fontend/css/style.css
+HTTP_REFERER=http://127.0.0.1/malibu/activities/contest
 ---
