@@ -62,7 +62,7 @@ foreach (array("jquery-1.8.3.min.js",
             //fix: true, //滚动条
             shadeClose: true,
             //closeBtn: false,
-            area : ['800px' , '450px'],
+            area : ['480px' , '480px'],
             offset: [($(window).height() - 450)/2 + 'px', ''],
             //offset : ['100px',''],
             //border: [0],

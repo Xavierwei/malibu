@@ -186,56 +186,53 @@ $(function(){
 
 
     // panel event
+
     if( !LP.getCookie('_age_checked_') ){
         //showAgeCheckPanel();
     }
 
+    //计算星级别
+    function  getStar(num){
+        if(!num)
+            return 0;
+        else if(num <= 10)
+            return 20;
+        else if(num <= 50)
+            return 40;
+        else if(num <= 200)
+            return 60;
+        else if(num <= 500)
+            return 80;
+        else
+            return 100;
+    }
 
-    $('.nav1').click(function(){
-        ga('send', 'event', 'nav', 'brand', 'brand');
-    });
-
-    $('.nav2').click(function(){
-        ga('send', 'event', 'nav', 'products', 'products');
-    });
-
-    $('.nav3').click(function(){
-        ga('send', 'event', 'nav', 'media', 'media');
-    });
-
-    $('.tmalllink').click(function(){
-        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
-    });
-
-    $('.pt_pro1 a').click(function(){
-        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
-    });
-
-    $('.pt_pro2 a').click(function(){
-        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
-    });
-
-    $('.sec_prolist li').eq(0).find('a').click(function(){
-        ga('send', 'event', 'nav', 'original_drink2', 'original_drink2');
-    });
-
-    $('.sec_prolist li').eq(1).find('a').click(function(){
-        ga('send', 'event', 'nav', 'original_drink1', 'original_drink1');
-    });
-
-    $('.sec_prolist li').eq(2).find('a').click(function(){
-        ga('send', 'event', 'nav', 'original_drink3', 'original_drink3');
-    });
-
-    $('.sec_prolist li').eq(3).find('a').click(function(){
-        ga('send', 'event', 'nav', 'original_drink4', 'original_drink4');
-    });
-
-    $('.sec_prolist li').eq(4).find('a').click(function(){
-        ga('send', 'event', 'nav', 'original_drink5', 'original_drink5');
-    });
-
-    $('.sec_prolist li').eq(5).find('a').click(function(){
-        ga('send', 'event', 'nav', 'original_drink6', 'original_drink6');
+    //投票页面
+    $('.video_setstar').click(function(){
+        videourl=$(this).attr("href");
+        video = $(this);
+        $.ajax({
+            type: "get",
+            url: videourl,
+            dataType: "json",
+            success: function (data) {
+                if(data.success)
+                {
+                    star=video.next("span").children("em");
+                    star.html(parseInt(star.html()) + 1);
+                    video.parent("div").next("div").children(".act_votestat").css("width",getStar(star.html())+"%");
+                    //alert(data.message);
+                }
+                else
+                {
+                    //alert(data.message);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //TODO
+            }
+        });
+        //alert($(this).attr("href"));
+        return false;
     });
 });
