@@ -34,6 +34,11 @@ class ActivitiesController extends Controller
         $this->render('index');
 	}
 
+    public function actionWinner()
+    {
+        $this->render('winner');
+    }
+
     public function actionContest()
     {
         $model=Activities::model()->findAll();

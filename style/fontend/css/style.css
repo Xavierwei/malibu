@@ -7,7 +7,7 @@
 /* Reset
 ================================================================================================= */
 html{background: #fff;}
-body{font-family:"Microsoft Yahei",simsun,arial,sans-serif;color:#542a08;font-size:12px;line-height:1.666em;background: url('../img/hdbg.jpg') no-repeat top center;}
+body{font-family:"Microsoft Yahei",simhei,arial,sans-serif;color:#3f2021;font-size:12px;line-height:1.666em;background: url('../img/hdbg.jpg') no-repeat top center;}
 h1,h2,h3{font-size:100%;}
 body,h1,h2,h3,h4,ul,li,p,img,div{margin:0;padding:0;border:0;}
 img{margin:0;line-height:normal;}
@@ -17,7 +17,7 @@ table{border-collapse:collapse;border-spacing:0;}
 
 /* Commonly Used
 ================================================================================================= */
-a{text-decoration:none;color:#00aba4;outline: none;}
+a{text-decoration:none;color:#3f2021;outline: none;}
 a:hover{color:#018b85}
 .cs-clear{+zoom:1;}
 .cs-clear:before,
@@ -26,9 +26,11 @@ a:hover{color:#018b85}
 .fr{float: right;}
 .column{width:1000px;margin:0 auto;position: relative;}
 
+p {margin:0 0 15px 0;}
+
 /* bg Used
 ================================================================================================= */
-body{height: 100%;width: 100%}
+body{}
 .bgtl{background: url('../img/bgtl.png') no-repeat;width: 79px;height: 159px;position:fixed;left:0;top:0;_position:absolute;}
 .bgbr{background: url('../img/bgbr.png') no-repeat;width: 128px;height:190px;position: fixed;bottom:0;right:0;_position:absolute;}
 .bottomlogo{position: fixed;background: url('../img/bottomlogo.png') no-repeat;width: 66px;height: 54px;left:10px;bottom:10px;_position:absolute;}
@@ -42,7 +44,8 @@ body{height: 100%;width: 100%}
 	/*.nav a.on{background: url('../img/navon.png') no-repeat;color:#fff}*/
 	.nav1,.nav2,.nav3{background: url('../img/nav.png') no-repeat;width: 130px;height: 25px;overflow: hidden;line-height: 400em}
 	.nav2{background-position: 0 -25px;}
-	.nav3{background-position: 0 -50px;}
+	.nav3{background-position: 0 -50px;display:none;}
+    .nav1 {margin-left:50px!important;margin-right:50px!important;}
 	.nav1.on{background-position: -130px -0px;}
 	.nav2.on{background-position: -130px -25px;}
 	.nav3.on{background-position: -130px -50px;}
@@ -94,12 +97,12 @@ body{height: 100%;width: 100%}
 .sec_prolist{margin: 20px auto;position: relative;width: 330px;}
 	.scrollpic{}
 	.sec_prolist_item{float:left;text-align: center;margin: 0;display:inline;width:110px;overflow: hidden;}
-		.sec_prolist_item p{color:#e64415;}
+		.sec_prolist_item p{color:#e64415;margin:0;}
 		.sec_prolist_item a{color:#00aba4;}
 	.scrollbtn{width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
 	.prev{background: url('../img/prev.png') no-repeat;left:-30px}
 	.next{background: url('../img/next.png') no-repeat;right:-30px}
-.jcarousel-clip{width: 330px;height: 160px;overflow: hidden}
+.jcarousel-clip{width: 330px;height: 210px;overflow: hidden}
 .jcarousel-prev{background: url('../img/prev.png') no-repeat;left:-30px;width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
 .jcarousel-next{background: url('../img/next.png') no-repeat;right:-30px;width: 20px;height: 20px;position: absolute;top:60px;cursor: pointer}
 .share{padding:10px 0;}
@@ -109,7 +112,7 @@ body{height: 100%;width: 100%}
 ================================================================================================= */
 .sec_home{width:630px;margin: 0 auto;}
 	.sechome_pho{float:right;padding:60px 0 0;}
-	.sechome_info{float: left;width: 330px;padding:30px 0 0 60px;}
+	.sechome_info{float: left;width: 415px;padding:30px 0 0 60px;}
 	.sechome_info .protit{font-size: 19px;text-align: left;}
 
 
@@ -188,7 +191,8 @@ body{height: 100%;width: 100%}
 	.act_wordtit{background: url('../img/act_linebg.png') no-repeat center bottom;color:#e64415;font-size: 20px;text-align: center;font-weight: bold;padding:15px 0;margin-bottom: 12px}
 	.act_videolist{width: 500px}
 		.act_videoitem{float: left;margin-right: 20px;}
-			.act_video{height: 150px;width: 146px;margin-bottom: 5px;}
+			.act_video{cursor:pointer;height: 150px;width: 146px;margin-bottom: 5px;position: relative;}
+            .act_video .msg {display:none;position: absolute;background:#E64415;color:#fff;padding:10px 0;text-align:center;width:100%;bottom:0;}
 			.act_videoinfo{}
 				.act_infotiem{color:#e64415}
 				.act_infouser{font-size: 13px;}
@@ -201,13 +205,14 @@ body{height: 100%;width: 100%}
 		.act_videocar{overflow: hidden;width: 490px;height: 250px}
 			.act_concarlist .jcarousel-clip{width: 490px;height: 250px}
 				.act_convote a{color:#542a08}
+                .act_convote a:hover {color:#E64415;}
 				.act_convote em{color:#e64415}
 			.act_votestatbg{background: url('../img/act_votestat.png') repeat-x; width: 60px;height: 12px;overflow: hidden}
 				.act_votestat{background: url('../img/act_votestat2.png') repeat-x;height: 12px;float: left;}
 .act_malivand{margin: 0 auto 80px}
 	.act_maltit{font-size: 22px;font-weight: bold;color:#e64415;line-height: 35px;height: 45px;width: 480px;margin: 0 auto}
 	.act_malvideo{width: 480px;margin: 10px auto}
-	.act_maltxt{width: 430px;margin:10px auto 30px;font-weight: bold;font-size: 13px;line-height: 15px;}
+	.act_maltxt{width: 430px;margin:10px auto 30px;font-weight: bold;font-size: 13px;line-height: 19px;}
 	/**/
 	.act_malintro{width: 556px;margin: -40px auto 0;}
 		.act_malitem{font-weight: bold;width: 160px;text-align: center;float: left;padding:130px 12px 0;background: url('../img/act_malintro.png') no-repeat;}

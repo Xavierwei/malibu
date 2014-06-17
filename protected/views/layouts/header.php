@@ -9,10 +9,15 @@
     <!--    --><?php //Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/admin/script/jquery.min.js");?>
     <!--    --><?php //Yii::app()->getClientScript()->registerScriptFile(yii::app()->baseUrl."/style/admin/script/admin.js");?>
     <?php Yii::app()->getClientScript()->registerCssFile(yii::app()->baseUrl."/style/fontend/css/style.css");?>
+    <?php Yii::app()->getClientScript()->registerCssFile(yii::app()->baseUrl."/style/fontend/css/video-js.css");?>
+<!--    <script src="http://js.t.sinajs.cn/t4/enterprise/js/public/appframe/client.js?version="></script>-->
+    <script>
+        videojs.options.flash.swf = "video-js.swf";
+    </script>
 </head>
 <body>
 <div class="page">
-    <div class="phd" style="top:-97px;" data-animate="top:0" data-time="500" data-easing="easeOutQuart">
+    <div class="phd">
         <div class="nav cs-clear">
             <?php
                 $model=Menu::model()->getRootList();

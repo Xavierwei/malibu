@@ -77,6 +77,7 @@ class ProductController extends Controller
             array(
                 'condition'=>'menu_id = :menu_id AND audit = 1',        //audit 1表示已经审核
                 'params'=>array(':menu_id'=>$model->id),
+                'order'=>'create_time DESC'
             )
         );
         $this->render('original',array('model'=>$model,'children'=>$children));

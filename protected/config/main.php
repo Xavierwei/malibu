@@ -74,10 +74,10 @@ return array(
 			//'enableCookieValidation' => true,
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=c2malibu',
+			'connectionString' => 'mysql:host=localhost;dbname=malibu',
 			'emulatePrepare' => true,
             'schemaCachingDuration'=>3600,  // 开启表结构缓存（schema caching）提高性能
-            'schemaCacheID'=>'MemCache',    //设置缓存名称
+            //'schemaCacheID'=>'MemCache',    //设置缓存名称
             'enableProfiling' => true,                  //这个是用来记录日志的，会记录每一条语句执行的时间
             'enableParamLogging' => true,       //true表示包括sql语句的参数在内的信息都会记录到日志里，非常详细
 			'username' => 'root',

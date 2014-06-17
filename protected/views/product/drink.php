@@ -17,11 +17,9 @@
                 <p class="secpro_txt"><?=$model->content;?></p>
             </div>
         </div>
-        <div class="share cs-clear">
-            <a target="_blank" href="http://service.weibo.com/share/share.php?title=<?=$model->title;?>"><img src="<?=Yii::app()->baseUrl;?>/style/fontend/img/share_weibo.png" /></a>
-        </div>
+
         <div class="cs-clear video">
-            <iframe height=<?=Yii::app()->params['videoHeight']?> width=<?=Yii::app()->params['videoWidth']?> src="http://player.youku.com/embed/<?=Drtool::getYouKuId($model->source_url)?>" frameborder=0 allowfullscreen></iframe>
+            <?=$model->source_url;?>
         </div>
     </div>
 </div>

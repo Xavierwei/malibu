@@ -59,44 +59,44 @@ $(function(){
         return LP.setCookie(name, '', -1, path, domain);
     };
 
-    $('[data-animate]')
-        .each(function(){
-            var $dom = $(this);
-            var tar = $dom.data('animate');
-            var time = parseInt( $dom.data('time') );
-            var delay = $dom.data('delay') || 0;
-            var easing = $dom.data('easing');
-            var begin = $dom.data('begin');
-            tar = tar.split(';');
-            var tarCss = {} , tmp;
-            for (var i = tar.length - 1; i >= 0; i--) {
-                tmp = tar[i].split(':');
-                if( tmp.length == 2 )
-                    tarCss[ tmp[0] ] = $.trim(tmp[1]);
-            }
-            // if( isUglyIe && tarCss.opacity !== undefined ){
-            //     delete tarCss.opacity;
-            // }
-            $dom.delay( delay )
-                .animate( tarCss , time , easing );
-            // if( begin ){
-            //     setTimeout(function(){
-            //         animation_begins[begin].call( $dom );
-            //     } , delay);
-            // }
-        });
+//    $('[data-animate]')
+//        .each(function(){
+//            var $dom = $(this);
+//            var tar = $dom.data('animate');
+//            var time = parseInt( $dom.data('time') );
+//            var delay = $dom.data('delay') || 0;
+//            var easing = $dom.data('easing');
+//            var begin = $dom.data('begin');
+//            tar = tar.split(';');
+//            var tarCss = {} , tmp;
+//            for (var i = tar.length - 1; i >= 0; i--) {
+//                tmp = tar[i].split(':');
+//                if( tmp.length == 2 )
+//                    tarCss[ tmp[0] ] = $.trim(tmp[1]);
+//            }
+//            // if( isUglyIe && tarCss.opacity !== undefined ){
+//            //     delete tarCss.opacity;
+//            // }
+//            $dom.delay( delay )
+//                .animate( tarCss , time , easing );
+//            // if( begin ){
+//            //     setTimeout(function(){
+//            //         animation_begins[begin].call( $dom );
+//            //     } , delay);
+//            // }
+//        });
 
     // 页面内容淡出 
-    $.when( $('.pbd').hide()
-        .delay(500)
-        .fadeIn(500) )
-        .done(function(){
-            $('.sec_propage')
-                .find('img')
-                .eq(1)
-                .delay(200)
-                .fadeIn(500);
-        });
+//    $.when( $('.pbd').hide()
+//        .delay(500)
+//        .fadeIn(500) )
+//        .done(function(){
+//            $('.sec_propage')
+//                .find('img')
+//                .eq(1)
+//                .delay(200)
+//                .fadeIn(500);
+//        });
 
     jQuery('#mycarousel').jcarousel({
             wrap: 'circular'
@@ -222,11 +222,18 @@ $(function(){
                     star.html(parseInt(star.html()) + 1);
                     video.parent("div").next("div").children(".act_votestat").css("width",getStar(star.html())+"%");
                     //alert(data.message);
+                    var videoWrap = video.parents('li').find('.act_video');
+                    videoWrap.append('<div class="msg">'+data.message+'</div>');
                 }
                 else
                 {
+                    var videoWrap = video.parents('li').find('.act_video');
+                    videoWrap.append('<div class="msg">'+data.message+'</div>');
                     //alert(data.message);
                 }
+                videoWrap.find('.msg').fadeIn();
+                videoWrap.find('.msg').delay(1000).fadeOut();
+
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 //TODO
@@ -234,5 +241,53 @@ $(function(){
         });
         //alert($(this).attr("href"));
         return false;
+    });
+
+    $('.nav1').click(function(){
+        ga('send', 'event', 'nav', 'brand', 'brand');
+    });
+
+    $('.nav2').click(function(){
+        ga('send', 'event', 'nav', 'products', 'products');
+    });
+
+    $('.nav3').click(function(){
+        ga('send', 'event', 'nav', 'media', 'media');
+    });
+
+    $('.tmalllink').click(function(){
+        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
+    });
+
+    $('.pt_pro1 a').click(function(){
+        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
+    });
+
+    $('.pt_pro2 a').click(function(){
+        ga('send', 'event', 'nav', 'tmalllink', 'tmalllink');
+    });
+
+    $('.sec_prolist li').eq(0).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink2', 'original_drink2');
+    });
+
+    $('.sec_prolist li').eq(1).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink1', 'original_drink1');
+    });
+
+    $('.sec_prolist li').eq(2).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink3', 'original_drink3');
+    });
+
+    $('.sec_prolist li').eq(3).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink4', 'original_drink4');
+    });
+
+    $('.sec_prolist li').eq(4).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink5', 'original_drink5');
+    });
+
+    $('.sec_prolist li').eq(5).find('a').click(function(){
+        ga('send', 'event', 'nav', 'original_drink6', 'original_drink6');
     });
 });

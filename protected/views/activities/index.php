@@ -1,7 +1,11 @@
 <div class="act_malivand">
     <div class="act_maltit">马利宝天团</div>
     <div class="act_malvideo">
-        <img src="<?=Yii::app()->baseUrl.'/style/fontend/'?>img/malivand_video.jpg" />
+        <video id="example_video_1" class="video-js vjs-default-skin" poster="<?=Yii::app()->baseUrl?>/video/home.jpg" controls preload="none" width="480" height="267"
+               data-setup="{}">
+            <source src="<?=Yii::app()->baseUrl?>/video/home.mp4" type='video/mp4' />
+            <source src="<?=Yii::app()->baseUrl?>/video/home.webm" type='video/webm' />
+        </video>
     </div>
     <!-- mod txt -->
     <div class="act_maltxt">
