@@ -16,7 +16,7 @@
                 <?php foreach($model as $key => $value):?>
                     <li class="act_videoitem">
                         <!--  -->
-                        <div class="act_video" onclick=viewVideo('<?=Yii::app()->createUrl('/activities/video',array('url'=>$value->video_url))?>') ><img src="<?=Yii::app()->baseUrl.$value->photo_url?>" /></div>
+                        <div class="act_video" onclick=viewVideo('<?=Yii::app()->createUrl('/activities/video',array('id'=>$value->id))?>') ><img src="<?=Yii::app()->baseUrl.$value->photo_url?>" /></div>
                         <div class="act_videoinfo">
                             <p class="act_infotiem"><?=date('Y-m-d',$value->create_time)?></p>
                             <div class="act_infouser">上传者 <?=$value->author?> <span><img src="<?=Yii::app()->baseUrl.'/style/fontend/'?>img/act_weiboicon.png" /></span></div>

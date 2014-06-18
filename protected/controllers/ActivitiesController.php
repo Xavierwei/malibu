@@ -76,9 +76,10 @@ class ActivitiesController extends Controller
         }
     }
 
-    public function actionVideo($url)
+    public function actionVideo($id)
     {
         $this->layout=false;
+        $url=Activities::model()->findByPk((int)$id)->video_url;
         $this->render('video',array('url'=>$url));
     }
 
