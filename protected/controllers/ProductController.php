@@ -69,7 +69,7 @@ class ProductController extends Controller
         $model=Menu::model()->find(
             array(
                 'condition'=>'component = :component',
-                'order'    => 'update_time DESC',
+                'order'    => 'id DESC',
                 'params'=>array(':component'=>'original'),
             )
         );
@@ -78,7 +78,7 @@ class ProductController extends Controller
             array(
                 'condition'=>'menu_id = :menu_id AND audit = 1',        //audit 1表示已经审核
                 'params'=>array(':menu_id'=>$model->id),
-                'order'    => 'update_time DESC',
+                'order'    => 'create_time DESC',
                 'limit'=>25,
             )
         );
@@ -92,7 +92,7 @@ class ProductController extends Controller
             array(
                 'condition'=>'component = :component',
                 'params'=>array(':component'=>'original'),
-                'order'    => 'update_time DESC',
+                'order'    => 'create_time DESC',
             )
         );
 
@@ -113,7 +113,7 @@ class ProductController extends Controller
                 array(
                     'condition'=>'audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
                     'params'=>array(':menu_id'=>$modelMenu->id),
-                    'order' => 'update_time DESC',
+                    'order' => 'create_time DESC',
                     'limit'=>1,
                     'offset'=>$page,
                 )
