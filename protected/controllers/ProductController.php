@@ -69,6 +69,7 @@ class ProductController extends Controller
         $model=Menu::model()->find(
             array(
                 'condition'=>'component = :component',
+                'order'    => 'update_time DESC',
                 'params'=>array(':component'=>'original'),
             )
         );
@@ -77,65 +78,47 @@ class ProductController extends Controller
             array(
                 'condition'=>'menu_id = :menu_id AND audit = 1',        //audit 1表示已经审核
                 'params'=>array(':menu_id'=>$model->id),
-                'order'=>'create_time DESC'
+                'order'    => 'update_time DESC',
+                'limit'=>25,
             )
         );
         $this->render('original',array('model'=>$model,'children'=>$children));
     }
 
-    public function actionDrink($id)
+    public function actionDrink()
     {
         // original 为椰子味朗姆预调酒
         $modelMenu=Menu::model()->find(
             array(
                 'condition'=>'component = :component',
                 'params'=>array(':component'=>'original'),
+                'order'    => 'update_time DESC',
             )
         );
 
-        if(Yii::app()->request->getParam('prev')=='prev')
-        {
-            $model=News::model()->find(
-                array(
-                    'condition'=>'id < :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
-                )
-            );
-        }
-        elseif(Yii::app()->request->getParam('next')=='next')
-        {
-            $model=News::model()->find(
-                array(
-                    'condition'=>'id > :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
-                )
-            );
-        }
-        else
-        {
-            $model=News::model()->find(
-                array(
-                    'condition'=>'id = :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
-                )
-            );
-        }
 
-        if($model)
+        $count=News::model()->count(
+            array(
+                'condition'=>'audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
+                'params'=>array(':menu_id'=>$modelMenu->id),
+            )
+        );
+
+        if($count)
         {
-            $this->render('drink',array('model'=>$model));
-        }
-        else
-        {
+            $page=Yii::app()->request->getParam('page') ? (int)Yii::app()->request->getParam('page') : 0;
+            $prevpage = $page == 0 ? $count-1 : $page-1;
+            $nextpage = $page == $count-1 ? 0 : $page+1;
             $model=News::model()->find(
                 array(
-                    'condition'=>'id = :id AND audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
-                    'params'=>array(':id'=>intval($id),':menu_id'=>$modelMenu->id),
+                    'condition'=>'audit = 1 AND menu_id = :menu_id',        //audit 1表示已经审核
+                    'params'=>array(':menu_id'=>$modelMenu->id),
+                    'order' => 'update_time DESC',
+                    'limit'=>1,
+                    'offset'=>$page,
                 )
             );
-
-            $this->render('drink',array('model'=>$model));
+            $this->render('drink',array('model'=>$model,'prevpage'=>$prevpage,'nextpage'=>$nextpage));
         }
-
     }
 }

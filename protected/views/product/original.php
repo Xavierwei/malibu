@@ -15,9 +15,9 @@
         <ul class="scrollpic cs-clear" id="mycarousel">
             <?php foreach($children as $key =>$value):?>
                 <li class="sec_prolist_item">
-                    <a href="<?=Yii::app()->createUrl(Yii::app()->controller->id.'/drink',array('id'=>$value->id))?>"><img src="<?=$value->photo1;?>" /></a>
-                    <a href="<?=Yii::app()->createUrl(Yii::app()->controller->id.'/drink',array('id'=>$value->id))?>"><p><?=$value->title;?></p></a>
-                    <a href="<?=Yii::app()->createUrl(Yii::app()->controller->id.'/drink',array('id'=>$value->id))?>">查看如何制作</a>
+                    <a href="<?=Yii::app()->createUrl(Yii::app()->controller->id.'/drink',array('page'=>$key))?>"><img src="<?=$value->photo1;?>" /></a>
+                    <a href="<?=Yii::app()->createUrl(Yii::app()->controller->id.'/drink',array('page'=>$key))?>"><p><?=$value->title;?></p></a>
+                    <a href="<?=Yii::app()->createUrl(Yii::app()->controller->id.'/drink',array('page'=>$key))?>">查看如何制作</a>
                 </li>
             <?php endforeach;?>
         </ul>

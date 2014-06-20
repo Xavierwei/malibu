@@ -58,6 +58,7 @@ class NewsController extends Controller
                 $count = News::model()->count($criteria);
                 $pager = new CPagination($count);
                 $pager->pageSize = 15;
+                $criteria->order = 't.update_time DESC';
                 $pager->applyLimit($criteria);
                 $data = News::model()->findAll($criteria);
             }
