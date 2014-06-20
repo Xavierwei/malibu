@@ -92,7 +92,7 @@ class ProductController extends Controller
             array(
                 'condition'=>'component = :component',
                 'params'=>array(':component'=>'original'),
-                'order'    => 'create_time DESC',
+                'order'    => 'id DESC',
             )
         );
 
