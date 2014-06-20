@@ -27,6 +27,7 @@ a:hover{color:#018b85}
 .column{width:1000px;margin:0 auto;position: relative;}
 
 p {margin:0 0 15px 0;}
+span {font-family: arial,verdana;}
 
 /* bg Used
 ================================================================================================= */
@@ -199,8 +200,8 @@ body{}
 	.act_tips{font-weight: bold;text-align: center;padding: 20px 0;font-size: 14px;}
 .act_con{width: 480px;margin: 0 auto 60px}
 	.act_contit{background: url('../img/act_contit.png') no-repeat;width: 214px;height: 45px;}
-	.act_contxt{padding: 0 35px 10px;font-weight: bold;font-size: 13px;line-height: 15px;}
-		.act_contxt p{padding:8px 0}
+	.act_contxt{padding: 10px 35px 10px;font-weight: bold;font-size: 13px;line-height: 15px;}
+		.act_contxt p{padding:8px 0;margin:0 0 5px 0;}
 	.act_concarlist{position: relative;width: 490px;height: 250px;}
 		.act_videocar{overflow: hidden;width: 490px;height: 250px}
 			.act_concarlist .jcarousel-clip{width: 490px;height: 250px}
@@ -215,7 +216,7 @@ body{}
 	.act_maltxt{width: 430px;margin:10px auto 30px;font-weight: bold;font-size: 13px;line-height: 19px;}
 	/**/
 	.act_malintro{width: 556px;margin: -40px auto 0;}
-		.act_malitem{font-weight: bold;width: 160px;text-align: center;float: left;padding:130px 12px 0;background: url('../img/act_malintro.png') no-repeat;}
+		.act_malitem{font-weight: bold;width: 160px;text-align:justify;float: left;padding:130px 12px 0;background: url('../img/act_malintro.png') no-repeat;}
 		.act_malitem1{background-position: 70px 0}
 		.act_malitem2{background-position: -106px 0}
 		.act_malitem3{background-position: -292px 0}
