@@ -32,10 +32,9 @@ class Activities extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, author, video_url, photo_url, hit', 'required'),
+			array('title, author, uid, video_url, photo_url, hit', 'required'),
 			array('audit', 'numerical', 'integerOnly'=>true),
 			array('title, author', 'length', 'max'=>30),
-			array('video_url, photo_url', 'length', 'max'=>255),
 			array('hit, create_time, update_time', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -63,6 +62,7 @@ class Activities extends CActiveRecord
 			'id' => 'id',
 			'title' => '标题',
 			'author' => '作者',
+            'uid' => 'uid',
 			'video_url' => 'mp4',
 			'photo_url' => '封面',
 			'hit' => '投票数量',

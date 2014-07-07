@@ -30,14 +30,21 @@
         <tr>
             <td class="leftTd" width="100"><?php echo $form->labelEx($model,'author'); ?></td>
             <td colspan="5">
-                <?php echo $form->textField($model,'author',array('value'=>$model->title,'class'=>'commonText'));?>
+                <?php echo $form->textField($model,'author',array('value'=>$model->author,'class'=>'commonText'));?>
                 <?php echo $form->error($model,'author'); ?>
             </td>
         </tr>
         <tr>
-            <td class="leftTd" width="100"><?php echo $form->labelEx($model,'video_url'); ?></td>
+            <td class="leftTd" width="100"><?php echo $form->labelEx($model,'uid'); ?></td>
             <td colspan="5">
-                <?php echo $form->textArea($model,'video_url',array('value'=>$model->video_url,'class'=>'commonText'));?>
+                <?php echo $form->textField($model,'uid',array('value'=>$model->uid,'class'=>'commonText'));?>
+                <?php echo $form->error($model,'uid'); ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftTd" width="100">视频</td>
+            <td colspan="5">
+                <?php echo $form->textArea($model,'video_url',array('value'=>$model->video_url,'class'=>'commonText commonText2'));?>
                 <?php echo $form->error($model,'video_url'); ?>
             </td>
         </tr>

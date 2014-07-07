@@ -290,4 +290,8 @@ $(function(){
     $('.sec_prolist li').eq(5).find('a').click(function(){
         ga('send', 'event', 'nav', 'original_drink6', 'original_drink6');
     });
+
+    $('.vjs-big-play-button').live('click',function(){
+        ga('send', 'event', 'nav', 'home_video', 'home_video');
+    })
 });

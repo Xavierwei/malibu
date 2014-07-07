@@ -19,7 +19,7 @@
                         <div class="act_video" onclick=viewVideo('<?=Yii::app()->createUrl('/activities/video',array('id'=>$value->id))?>') ><img src="<?=Yii::app()->baseUrl.$value->photo_url?>" /></div>
                         <div class="act_videoinfo">
                             <p class="act_infotiem"><?=date('Y-m-d',$value->create_time)?></p>
-                            <div class="act_infouser">上传者 <?=$value->author?> <span><img src="<?=Yii::app()->baseUrl.'/style/fontend/'?>img/act_weiboicon.png" /></span></div>
+                            <div class="act_infouser">上传者 <a href="http://weibo.com/<?=$value->uid?>" target="_blank"><?=$value->author?> <span><img src="<?=Yii::app()->baseUrl.'/style/fontend/'?>img/act_weiboicon.png" /></span></a></div>
                             <div class="act_convote cs-celar"><a href="<?=Yii::app()->createUrl('/activities/setstar',array('id'=>$value->id))?>" class="fl video_setstar">我要投票</a><span class="fr">得票数 <em><?=$value->hit?></em></span></div>
                             <div class="act_votestatbg"><p class="act_votestat" style="width: <?=Activities::getStar($value->hit)?>%"></p></div>
                         </div>

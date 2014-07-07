@@ -10,7 +10,7 @@
     <div class="section sec_pro sec_drink cs-clear">
         <div class=" cs-clear">
             <div class="secDrink_pho">
-                <img src="<?=$model->photo1?>" width="94" />
+                <img src="/2<?=$model->photo1?>" width="94" />
             </div>
             <div class="secDrink_info">
                 <h2 class="protit "><?=$model->title;?></h2>
